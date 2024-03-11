@@ -1,6 +1,6 @@
 "use client";
 import { rowdies } from "../fonts/fonts";
-import BackgroundAnimation from "./BackgroundAnimation";
+import BackgroundAnimation from "./backgroundAnimation";
 
 const HeroSection = () => {
   return (
