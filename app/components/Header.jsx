@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`${sora.className} flex items-center justify-between  h-20 container mx-auto z-20`}
+      className={`${sora.className} flex items-center justify-between z-50  h-20 container mx-auto`}
     >
       {/* logo */}
       <div className="w-36">

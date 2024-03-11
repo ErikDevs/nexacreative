@@ -31,7 +31,7 @@ const HeroSection = () => {
         <BackgroundAnimation />
       </div>
       {/* mobile  */}
-      <div className="md:hidden bgContainer">
+      <div className="md:hidden -z-10 bgContainer">
         <BackgroundAnimation />
       </div>
     </div>
