@@ -1,11 +1,10 @@
-import { Sora } from "next/font/google";
-import { Roboto } from "next/font/google";
-import { Rowdies } from "next/font/google";
+import { Poppins, Rowdies, Sora } from "next/font/google";
+
 const sora = Sora({
   subsets: ["latin"],
 });
 
-const roboto = Roboto({
+const roboto = Poppins({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
 });

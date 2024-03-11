@@ -4,15 +4,20 @@
 
 :root {
   /* Your default theme */
-  --background: #efecec;
-  --foreground: #0c2d57;
-  padding: 0;
-  box-sizing: border-box;
-  margin: 0;
+  --background: white;
+  --foreground: black;
 }
 
-[data-theme="dark"] {
-  --background: #efecec;
-  --foreground: #0c2d57;
+[data-theme='dark'] {
+  --background: red;
+  --foreground: yellow;
 }
 
+.carousel {
+  height: 150px !important;
+}
+
+.carousel .image {
+  width: 120px !important;
+  height: "" !important;
+}

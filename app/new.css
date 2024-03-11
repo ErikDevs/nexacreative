@@ -1,16 +1,17 @@
 
 .containers {
-  position: relative;
   display: grid;
-  grid-template-rows: repeat(20, 5vh);
+  grid-template-rows: repeat(20, 4vh);
   grid-template-columns: repeat(20, 5vw);
   transform-style: preserve-3d;
 }
 .monitor {
   position: absolute;
+  transform-style: preserve-3d;
   top: 0;
   left: 0;
   width: 100%;
+  scroll-behavior: unset;
   height: 100%;
   pointer-events: none;
   transform-style: preserve-3d;

@@ -13,44 +13,48 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className={`${sora.className} container relative mx-auto px-6 z-20`}>
-      <div className="flex items-center mt-10 justify-between">
-        {/* logo */}
-        <div className="w-36">
-          <Image src={theme == "dark" ? logoWhite : logoDark} alt="logo" />
-        </div>
-        {/* Menu items */}
-        <ul className="hidden md:flex space-x-6">
-          <Link className="hover:text-brightRed" href="#">
-            Home
-          </Link>
-          <Link className="hover:text-brightRed" href="#">
-            Services
-          </Link>
-          <Link className="hover:text-brightRed" href="#">
-            About Us
-          </Link>
-          <Link className="hover:text-brightRed" href="#">
-            Portfolio
-          </Link>
-          <Link className="hover:text-brightRed" href="#">
-            Contact
-          </Link>
-        </ul>
+    <nav
+      className={`${sora.className} flex items-center justify-between  h-20 container mx-auto z-20`}
+    >
+      {/* logo */}
+      <div className="w-36">
+        <Image
+          className="transition duration-150"
+          src={theme == "dark" ? logoWhite : logoDark}
+          alt="logo"
+        />
+      </div>
+      {/* Menu items */}
+      <ul className="hidden lg:flex space-x-6">
+        <Link className="hover:text-brightRed transition-all" href="#">
+          Home
+        </Link>
+        <Link className="hover:text-brightRed" href="#">
+          Services
+        </Link>
+        <Link className="hover:text-brightRed" href="#">
+          About Us
+        </Link>
+        <Link className="hover:text-brightRed" href="#">
+          Portfolio
+        </Link>
+        <Link className="hover:text-brightRed" href="#">
+          Contact
+        </Link>
+      </ul>
+      <div className="flex flex-row gap-8">
         <button className="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline">
-          Get Started
+          Get a quote
         </button>
-        <div>
-          {theme == "dark" ? (
-            <button onClick={() => setTheme("light")}>
-              <TiAdjustBrightness style={{ fontSize: "1.5em" }} />
-            </button>
-          ) : (
-            <button onClick={() => setTheme("dark")}>
-              <TiAdjustContrast style={{ fontSize: "1.5em" }} />
-            </button>
-          )}
-        </div>
+        {theme == "dark" ? (
+          <button onClick={() => setTheme("light")}>
+            <TiAdjustBrightness style={{ fontSize: "1.5em" }} />
+          </button>
+        ) : (
+          <button onClick={() => setTheme("dark")}>
+            <TiAdjustContrast style={{ fontSize: "1.5em" }} />
+          </button>
+        )}
       </div>
     </nav>
   );
