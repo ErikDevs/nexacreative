@@ -17,6 +17,7 @@ const Clients = () => {
         interval={3000}
         centerMode
         ariaLabel="none"
+        showThumbs={false}
         className="carousel"
       >
         <div className="flex my-16 gap-8 overflow-hidden mx-auto">
