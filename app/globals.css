@@ -21,3 +21,7 @@
   width: 120px !important;
   height: "" !important;
 }
+
+.bgContainer {
+  margin-top: -80px !important;
+}

@@ -9,7 +9,7 @@ const Portfolio = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="container px-6 mt-16">
+    <div className="container mt-16">
       <h1 className="text-4xl font-bold text-center mx-auto my-10">
         <span>-</span> Portfolio <span>-</span>{" "}
       </h1>

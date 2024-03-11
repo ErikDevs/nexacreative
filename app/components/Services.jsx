@@ -12,7 +12,7 @@ import { MdOutlineArrowForward } from "react-icons/md";
 
 const Services = () => {
   return (
-    <div className="container px-6">
+    <div className="container">
       <h1 className="text-4xl font-bold text-center mx-auto  my-12">
         - What We Do -
       </h1>

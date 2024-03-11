@@ -41,7 +41,7 @@ const Features = () => {
         </div>
         <div className="max-w-md">
           <h3 className="hidden mb-2 text-lg font-bold md:block"></h3>
-          <p className="text-gray-400 text-center md:text-left">
+          <p className="text-gray-400 text-left">
             Our commitment to affordability doesn't mean we compromise on
             quality. Instead, it reflects our dedication to providing you with
             the best possible service without breaking the bank.
@@ -58,7 +58,7 @@ const Features = () => {
         </div>
         <div className="max-w-md">
           <h3 className="hidden mb-2 text-lg font-bold md:block"></h3>
-          <p className="text-gray-400 text-center md:text-left">
+          <p className="text-gray-400 text-left">
             In our approach to serving clients, we firmly reject the notion of a
             one-size-fits-all solution. We understand that each business is
             unique, facing its own set of challenges, goals, and intricacies.
@@ -75,7 +75,7 @@ const Features = () => {
         </div>
         <div className="max-w-md">
           <h3 className="hidden mb-2 text-lg font-bold md:block"></h3>
-          <p className="text-gray-400 text-center md:text-left">
+          <p className="text-gray-400 text-left">
             Our unwavering commitment revolves around placing your needs at the
             forefront of our endeavors. We recognize that your success is
             intricately linked to the satisfaction of your audience, and,

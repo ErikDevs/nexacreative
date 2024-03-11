@@ -7,7 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Clients = () => {
   return (
-    <div className="px-6 mt-16">
+    <div className="mt-16">
       <h1 className="text-lg text-center">
         We are trusted by thousands of clients
       </h1>

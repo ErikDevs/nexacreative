@@ -27,7 +27,11 @@ const HeroSection = () => {
           Get in touch
         </button>
       </div>
-      <div className="md:w-1/2">
+      <div className="hidden md:block md:w-1/2">
+        <BackgroundAnimation />
+      </div>
+      {/* mobile  */}
+      <div className="md:hidden bgContainer">
         <BackgroundAnimation />
       </div>
     </div>
