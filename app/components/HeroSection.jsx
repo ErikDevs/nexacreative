@@ -24,11 +24,11 @@ const HeroSection = () => {
           </button>
         </div>
         <button className="p-3 md:hidden px-6 pt-2 text-white bg-brightRed rounded-full baseline">
-            Get in touch
-          </button>
+          Get in touch
+        </button>
       </div>
       <div className="md:w-1/2">
-        {/* <BackgroundAnimation  /> */}
+        <BackgroundAnimation />
       </div>
     </div>
   );
