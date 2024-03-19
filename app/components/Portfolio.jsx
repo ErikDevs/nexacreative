@@ -6,10 +6,10 @@ import Redgeinternational from "../constants/Images/redgeinternational.png";
 import React from "react";
 
 const Portfolio = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <div className="container mt-16">
+    <section className="container px mt-16">
       <h1 className="text-4xl font-bold text-center mx-auto my-10">
         <span>-</span> Portfolio <span>-</span>{" "}
       </h1>
@@ -34,23 +34,35 @@ const Portfolio = () => {
           <h2 className="text-2xl font-bold mt-5">Web Design & Development</h2>
         </div>
         <div>
-          <Image src={brandingItem} className="rounded-sm transition duration-300 ease-in-out hover:scale-105 " />
+          <Image
+            src={brandingItem}
+            className="rounded-sm transition duration-300 ease-in-out hover:scale-105 "
+          />
           <h2 className="text-2xl font-bold mt-5">Digital Marketing</h2>
         </div>
         <div>
-          <Image src={brandingItem} className="rounded-sm transition duration-300 ease-in-out hover:scale-105 " /> 
+          <Image
+            src={brandingItem}
+            className="rounded-sm transition duration-300 ease-in-out hover:scale-105 "
+          />
           <h2 className="text-2xl font-bold mt-5">Social Media</h2>
         </div>
         <div>
-          <Image src={brandingItem} className="rounded-sm transition duration-300 ease-in-out hover:scale-105 " />
+          <Image
+            src={brandingItem}
+            className="rounded-sm transition duration-300 ease-in-out hover:scale-105 "
+          />
           <h2 className="text-2xl font-bold mt-5">Graphic Design</h2>
         </div>
         <div>
-          <Image src={brandingItem} className="rounded-sm transition duration-300 ease-in-out hover:scale-105 " />
+          <Image
+            src={brandingItem}
+            className="rounded-sm transition duration-300 ease-in-out hover:scale-105 "
+          />
           <h2 className="text-2xl font-bold mt-5">Branding</h2>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

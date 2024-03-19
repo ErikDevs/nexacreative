@@ -8,14 +8,13 @@ import Testmonials from "./components/Testmonials";
 
 export default function Home() {
   return (
-    <div className="px-6 lg:px-24 mx-auto ">
-      <Header />
+    <main className="px-6 lg:px-24 mx-auto">
       <HeroSection />
       <Features />
       <Services />
       <Portfolio />
       <Testmonials />
       <Clients />
-    </div>
+    </main>
   );
 }

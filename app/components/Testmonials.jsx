@@ -9,7 +9,7 @@ const Testmonials = () => {
       <h1 className="text-lg">Testmonials</h1>
       <div className="flex flex-col md:flex-row justify-evenly">
         <h1 className="text-2xl md:text-4xl font-bold text-left">
-          Our success, echoed by our clients
+          Our success, as echoed by our esteemed clients
         </h1>
         <h2 className="text-lg font-semi-bold max-w-md text-gray-400">
           Our clients share their experiences of transformation and growth.
@@ -20,13 +20,13 @@ const Testmonials = () => {
         {/* container */}
         <div
           className={`${
-            theme != "dark" ? "bg-slate-200" : "bg-gray-800"
+            theme != "dark" ? "bg-slate-100" : "bg-gray-800"
           } "bg-slate-300 container rounded-md relative p-6 shadow-2xl"`}
         >
-          <i className="">
+          <i className="absolute -top-8">
             <BiSolidQuoteLeft style={{ fontSize: "4em" }} />
           </i>
-          <p>
+          <p className="mt-10">
             We now have a fantastic website that perfectly encapsulates the
             essence of our company thanks to them. Their service has exceeded
             all of our expectations, making us extremely happy.
@@ -38,13 +38,13 @@ const Testmonials = () => {
         {/* container */}
         <div
           className={`${
-            theme != "dark" ? "bg-slate-200" : "bg-gray-800"
+            theme != "dark" ? "bg-slate-100" : "bg-gray-800"
           } "bg-slate-300 container rounded-md relative p-6 shadow-2xl"`}
         >
-          <i className="">
+          <i className="absolute -top-8">
             <BiSolidQuoteLeft style={{ fontSize: "4em" }} />
           </i>
-          <p>
+          <p className="mt-10">
             Thanks to the hard work of the team, our company now has a
             state-of-the-art website that is also incredibly easy to navigate.
             Their digital marketing prowess is undeniable, and they should be
@@ -57,13 +57,13 @@ const Testmonials = () => {
         {/* container */}
         <div
           className={`${
-            theme != "dark" ? "bg-slate-200" : "bg-gray-800"
+            theme != "dark" ? "bg-slate-100" : "bg-gray-800"
           } "bg-slate-300 container rounded-md relative p-6 shadow-2xl"`}
         >
-          <i className="">
+          <i className="absolute -top-8">
             <BiSolidQuoteLeft style={{ fontSize: "4em" }} />
           </i>
-          <p>
+          <p className="mt-10">
             They have a team that is not only extremely knowledgeable but also
             very professional and quick to respond to any inquiries. They have
             proven to be an outstanding digital partner for us to collaborate

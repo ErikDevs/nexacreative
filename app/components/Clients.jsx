@@ -9,7 +9,7 @@ const Clients = () => {
   return (
     <div className="mt-16">
       <h1 className="text-lg text-center">
-        We are trusted by thousands of clients
+        We are trusted by thousands of Brands
       </h1>
       <Carousel
         autoPlay={true}
@@ -20,13 +20,7 @@ const Clients = () => {
         showThumbs={false}
         className="carousel"
       >
-        <div className="flex my-16 gap-8 overflow-hidden mx-auto">
-          <Image className="image" src={rafikiConcept} />
-          <Image className="image" src={rafikiConcept} />
-          <Image className="image" src={rafikiConcept} />
-          <Image className="image" src={rafikiConcept} />
-          <Image className="image" src={rafikiConcept} />
-        </div>
+        <div className="flex my-16 gap-8 overflow-hidden mx-auto"></div>
       </Carousel>
     </div>
   );

@@ -1,14 +1,17 @@
 "use client";
+import { useTheme } from "next-themes";
 import { rowdies } from "../fonts/fonts";
-import BackgroundAnimation from "./backgroundAnimation";
+import Smile from "../../public/smile.png";
+import Image from "next/image";
 
 const HeroSection = () => {
+  const { theme } = useTheme();
   return (
     <div
       id="hero"
-      className="container flex  md:mt-10 space-y-12 md:space-y-0 flex-col-reverse md:flex-row"
+      className="container overflow-hidden mx-auto flex md:mt-10 space-y-12 md:space-y-0 md:space-x-8 flex-col-reverse md:flex-row"
     >
-      <div className="flex flex-col mb-32 space-y-12 md:w-1/2">
+      <div className="flex flex-col justify-center space-y-12 md:w-1/2">
         <h1
           className={` ${rowdies.className} max-w-md text-4xl text-center md:text-5xl md:text-left`}
         >
@@ -27,14 +30,17 @@ const HeroSection = () => {
           Get in touch
         </button>
       </div>
-      <div className="hidden md:block md:w-1/2">
-        <BackgroundAnimation />
+      <div className="flex -mt-20 md:w-1/2">
+        <Image src={Smile} width={400} height={200} />
       </div>
-      {/* mobile  */}
-      <div className="md:hidden -z-10 bgContainer">
-        <BackgroundAnimation />
-      </div>
+      <div
+        className={`hidden md:block rounded-full ${
+          theme === "light" ? "bg-orange-500" : "bg-gray-500"
+        } opacity-10 absolute w-72 h-full rotate-45 -top-60 right-36 -z-10`}
+      ></div>
+      
     </div>
+    
   );
 };
 
