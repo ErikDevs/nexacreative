@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import logoDark from "../../public/DarkLogo.png";
 import logoWhite from "../../public/logo-white.png";
@@ -13,10 +13,11 @@ import Link from "next/link";
 import { BiMailSend, BiSend } from "react-icons/bi";
 import { BiPhone } from "react-icons/bi";
 import { BiLocationPlus } from "react-icons/bi";
-import NavLink from "./navLink";
+import { navLinks } from "../constants";
 
 const Footer = () => {
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [index, setIndex] = useState(0);
 
   return (
     <footer
@@ -76,7 +77,18 @@ const Footer = () => {
         </div>
         <div className="flex mt-10 md:mt-16 flex-col font-medium">
           <h2 className="font-bold mb-2">Quick links</h2>
-          <NavLink />
+          {navLinks.map((link, i) => (
+            <Link
+              onClick={() => setIndex(i)}
+              key={i}
+              className={`${
+                index === i ? "text-brightRed" : "hover-underline-animation"
+              } font-light`}
+              href={link.href}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
         <div className="flex mt-10 md:mt-16 flex-col font-light">
           <h2 className="font-bold mb-2">Our Services</h2>
