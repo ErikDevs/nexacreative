@@ -16,7 +16,7 @@ import { BiLocationPlus } from "react-icons/bi";
 import NavLink from "./navLink";
 
 const Footer = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <footer

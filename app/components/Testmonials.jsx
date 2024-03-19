@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import React from "react";
 import { BiSolidQuoteLeft } from "react-icons/bi";
 const Testmonials = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <div className="container my-16 mx-auto">
       <h1 className="text-lg">Testmonials</h1>
