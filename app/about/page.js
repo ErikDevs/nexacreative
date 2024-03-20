@@ -20,7 +20,7 @@ export default function Page() {
             About Nexa Creatives
           </h1>
         </div>
-        <div className="w-full h-[40vh] md:h-[60vh] -z-10 relative overflow-hidden">
+        <div className="w-full h-[30vh] md:h-[60vh] -z-10 relative overflow-hidden">
           <Image className="object-cover" src={Designer} alt="designer" />
           <div className="bg-black h-full w-full opacity-60 absolute top-0"></div>
         </div>

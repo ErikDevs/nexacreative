@@ -71,7 +71,7 @@ const Footer = () => {
             <Image
               className="hover:scale-110 transition duration-150 ease-in-out"
               src={LinkedIn}
-              width={32}
+              width={28}
             />
           </div>
         </div>
