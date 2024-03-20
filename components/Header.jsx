@@ -97,7 +97,10 @@ const Header = () => {
       >
         {navLinks.map((link, i) => (
           <Link
-            onClick={() => setIndex(i)}
+            onClick={() => {
+              setIndex(i);
+              setMenu(false);
+            }}
             key={link.name}
             href={link.href}
             className={`${
