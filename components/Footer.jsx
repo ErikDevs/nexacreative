@@ -1,31 +1,31 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import logoDark from "../../public/DarkLogo.png";
-import logoWhite from "../../public/logo-white.png";
+import logoDark from "../public/DarkLogo.png";
+import logoWhite from "../public/logo-white.png";
 import { useTheme } from "next-themes";
-import Facebook from "../../public/facebook.svg";
-import Instargram from "../../public/instagram.svg";
-import LinkedIn from "../../public/linkedIn.svg";
-import Pinterest from "../../public/pinterest.svg";
-import Bihanace from "../../public/behance.svg";
+import Facebook from "../public/facebook.svg";
+import Instargram from "../public/instagram.svg";
+import LinkedIn from "../public/linkedIn.svg";
+import Pinterest from "../public/pinterest.svg";
+import Bihanace from "../public/behance.svg";
 import Link from "next/link";
 import { BiMailSend, BiSend } from "react-icons/bi";
 import { BiPhone } from "react-icons/bi";
 import { BiLocationPlus } from "react-icons/bi";
-import { navLinks } from "../constants";
+import { navLinks } from "@/constants";
 
 const Footer = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const [index, setIndex] = useState(0);
 
   return (
     <footer
       className={`${
         theme === "dark" ? "bg-gray-900" : "bg-slate-100"
-      } mt-10 px-6 py-16 lg:px-24 mx-auto text-sm`}
+      } mt-10 px-6 py-16 lg:px-24 mx-auto text-base`}
     >
-      <div className="container flex flex-col justify-between w-full md:flex-row">
+      <div className="container grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-between w-full">
         <div className="flex flex-col">
           {/* logo */}
           <div className="w-28 mb-10">
@@ -81,9 +81,7 @@ const Footer = () => {
             <Link
               onClick={() => setIndex(i)}
               key={i}
-              className={`${
-                index === i ? "text-brightRed" : "hover-underline-animation"
-              } font-light`}
+              className={`${index === i ? "text-brightRed" : ""} font-light`}
               href={link.href}
             >
               {link.name}

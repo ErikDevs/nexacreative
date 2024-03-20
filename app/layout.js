@@ -1,7 +1,7 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Provider from "./components/ThemeProvider";
-import { roboto } from "./fonts/fonts";
+import { roboto } from "@/fonts/fonts";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Provider from "../components/ThemeProvider";
 import "./globals.css";
 
 export const metadata = {

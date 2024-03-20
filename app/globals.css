@@ -32,8 +32,19 @@
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.move-out {
+  transform: translateX(1000px);
+  transition: all cubic-bezier(0.39, 0.575, 0.565, 1) ease-out;
+  opacity: 0;
+}
+
+.move-in {
+  transform: translateX(0);
+  transition: all cubic-bezier(0.39, 0.575, 0.565, 1) ease-in;
+  opacity: 1;
 }

@@ -14,7 +14,7 @@ const Services = () => {
   return (
     <div className="container">
       <h1 className="text-4xl font-bold text-center mx-auto  my-12">
-        - What We Do -
+        - Our Services -
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-20 lg:grid-cols-3">
         {/* service */}
@@ -158,7 +158,8 @@ const Services = () => {
       </div>
       <div className="mt-10 mx-auto flex justify-center items-center">
         <button className="p-3 px-6 pt-2 flex items-center text-white bg-brightRed rounded-full baseline">
-          <span className="mr-4">Request a quote now</span> <MdOutlineArrowForward />
+          <span className="mr-4">Request a quote now</span>{" "}
+          <MdOutlineArrowForward />
         </button>
       </div>
     </div>

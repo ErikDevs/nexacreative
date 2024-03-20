@@ -1,7 +1,10 @@
+"use client";
+import { useTheme } from "next-themes";
 import React from "react";
 import { MdDoubleArrow } from "react-icons/md";
 
 const Features = () => {
+  const { theme } = useTheme();
   return (
     <div
       id="features"
@@ -31,7 +34,11 @@ const Features = () => {
       {/* numbered list */}
       <div className="flex flex-col space-y-8 md:w-1/2">
         {/* list item 1 */}
-        <div className="rounded-l-full bg-red-100  md:bg-transparent">
+        <div
+          className={`${
+            theme === "dark" ? "bg-gray-900" : "bg-slate-100"
+          } rounded-l-full md:bg-transparent`}
+        >
           <div className="flex items-center space-x-2">
             <div className="px-4 py-2 bg-brightRed rounded-full md:py-1 text-white">
               01
@@ -48,7 +55,11 @@ const Features = () => {
           </p>
         </div>
         {/* item 2 */}
-        <div className="rounded-l-full bg-red-100  md:bg-transparent">
+        <div
+          className={`${
+            theme === "dark" ? "bg-gray-900" : "bg-slate-100"
+          } rounded-l-full md:bg-transparent`}
+        >
           <div className="flex items-center space-x-2">
             <div className="px-4 py-2 bg-brightRed rounded-full md:py-1 text-white">
               02
@@ -65,7 +76,11 @@ const Features = () => {
           </p>
         </div>
         {/* item 3 */}
-        <div className="rounded-l-full bg-red-100  md:bg-transparent">
+        <div
+          className={`${
+            theme === "dark" ? "bg-gray-900" : "bg-slate-100"
+          } rounded-l-full md:bg-transparent`}
+        >
           <div className="flex items-center space-x-2">
             <div className="px-4 py-2 bg-brightRed rounded-full md:py-1 text-white">
               03

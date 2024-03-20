@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
-import { rowdies } from "../fonts/fonts";
-import Smile from "../../public/smile.png";
+import { rowdies } from "@/fonts/fonts";
+import Smile from "@/public/smile.png";
 import Image from "next/image";
 
 const HeroSection = () => {
@@ -13,7 +13,7 @@ const HeroSection = () => {
     >
       <div className="flex flex-col justify-center space-y-12 md:w-1/2">
         <h1
-          className={` ${rowdies.className} max-w-md text-4xl text-center md:text-5xl md:text-left`}
+          className={` ${rowdies.className} max-w-md text-4xl z-10 text-center md:text-5xl md:text-left`}
         >
           Transforming ideas into visual masterpieces
         </h1>
@@ -34,13 +34,11 @@ const HeroSection = () => {
         <Image src={Smile} width={400} height={200} />
       </div>
       <div
-        className={`hidden md:block rounded-full ${
-          theme === "light" ? "bg-orange-500" : "bg-gray-500"
-        } opacity-10 absolute w-72 h-full rotate-45 -top-60 right-36 -z-10`}
+        className={`md:block rounded-full ${
+          theme === "dark" ? "bg-gray-900" : "bg-brightRed opacity-10"
+        }  absolute w-72  h-96 md:w-96 lg:h-full md:h-1/2  rotate-45 right-0 -top-28 md:-top-56 lg:right-24 -z-10`}
       ></div>
-      
     </div>
-    
   );
 };
 
