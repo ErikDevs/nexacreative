@@ -32,11 +32,13 @@ const Header = () => {
         />
       </div>
       <div className="w-32">
-        <Image
-          className="transition duration-150"
-          src={theme == "dark" ? logoWhite : logoDark}
-          alt="logo"
-        />
+        <Link href="/">
+          <Image
+            className="transition duration-150"
+            src={theme == "dark" ? logoWhite : logoDark}
+            alt="logo"
+          />
+        </Link>
       </div>
       {/* Menu items */}
       <ul className="hidden lg:flex space-x-6">
@@ -70,7 +72,7 @@ const Header = () => {
                   : "hidden"
               } ${
                 theme === "dark" ? "text-white bg-black" : "text-black bg-white"
-              } ${subMenu ? "opacity-1" : "opacity-0"}`}
+              } ${subMenu ? "opacity-1 visible" : "opacity-0 hidden"}`}
             >
               {subServices.map((subSevice, i) => (
                 <Link
@@ -91,7 +93,7 @@ const Header = () => {
       <ul
         className={`${theme === "dark" ? "bg-black" : "bg-white"} ${
           menu ? "move-in" : "move-out"
-        } transition duration-300 ease-in-out lg:hidden flex flex-col justify-normal w-3/4 right-0  p-6 absolute top-0 h-svh gap-y-8`}
+        } transition duration-300 ease-in-out lg:hidden flex flex-col justify-normal w-2/3 right-0  p-6 absolute top-0 h-[100vh] z-50 gap-y-8`}
       >
         {navLinks.map((link, i) => (
           <Link
@@ -106,7 +108,7 @@ const Header = () => {
               {link.name}
               {!subMenu ? (
                 <MdOutlineExpandMore
-                  className={`${i === 1 ? "block" : "hidden"} ml-4`}
+                  className={`${i === 2 ? "block" : "hidden"} ml-4`}
                   onClick={() => setSubMenu(!subMenu)}
                 />
               ) : (
@@ -130,8 +132,8 @@ const Header = () => {
                 <Link
                   onClick={() => setSubMenu(!subMenu)}
                   className="hover-underline-animation"
-                  key={i}
-                  href={subSevice}
+                  key={subSevice.name}
+                  href={subSevice.href}
                 >
                   {subSevice.name}
                 </Link>

@@ -1,5 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import React from "react";
 import { MdDoubleArrow } from "react-icons/md";
 
@@ -24,9 +25,11 @@ const Features = () => {
         </p>
         <div>
           <button className="flex items-center mt-8 transition duration-300 hover:mr-6">
-            <span className="transition duration-300 hover:mr-2">
-              Learn more
-            </span>
+            <Link href="/about">
+              <span className="transition duration-300 hover:mr-2">
+                Learn more
+              </span>
+            </Link>
             <MdDoubleArrow />
           </button>
         </div>
