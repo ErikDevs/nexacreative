@@ -48,3 +48,75 @@
   transition: all cubic-bezier(0.39, 0.575, 0.565, 1) ease-in;
   opacity: 1;
 }
+
+.menu:hover .showMenu {
+  display: flex;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: "";
+  cursor: pointer;
+}
+
+.overlay2 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bgHover {
+  position: absolute;
+  background-color: #fc6736;
+  z-index: -1;
+  top: -6px;
+  left: -6px;
+  transition: all 1s ease-in-out;
+}
+
+.bgHover2 {
+  position: absolute;
+  background-color: rgb(31, 30, 30);
+  z-index: -1;
+  top: 6px;
+  left: 6px;
+  transition: all 1s ease-in-out;
+}
+
+.bgHover3 {
+  position: absolute;
+  background-color: #fc6736;
+  z-index: -1;
+  top: 6px;
+  left: 6px;
+  transition: all 1s ease-in-out;
+}
+
+.largeDiv:hover .bgHover3 {
+  top: -6px;
+  left: -6px;
+  background-color: rgb(31, 30, 30);
+}
+
+.largeDiv:hover .bgHover2 {
+  top: -6px;
+  left: -6px;
+  background-color: #fc6736;
+}
+
+.largeDiv:hover .bgHover {
+  top: 6px;
+  left: 6px;
+  background-color: rgb(31, 30, 30);
+}

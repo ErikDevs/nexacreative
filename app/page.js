@@ -1,3 +1,5 @@
+"use client";
+import { useTheme } from "next-themes";
 import Clients from "../components/Clients";
 import Features from "../components/Features";
 import HeroSection from "../components/HeroSection";
@@ -6,8 +8,13 @@ import Services from "../components/Services";
 import Testmonials from "../components/Testmonials";
 
 export default function Home() {
+  const { theme } = useTheme();
   return (
-    <main className="px-6 lg:px-24 mx-auto">
+    <main
+      className={`${
+        theme === "dark" ? "text-slate-100" : "text-blue-950"
+      } px-6 lg:px-24 mx-auto"`}
+    >
       <HeroSection />
       <Features />
       <Services />

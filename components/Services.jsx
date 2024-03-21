@@ -4,7 +4,7 @@ import React from "react";
 import webDesign from "../constants/Images/webdesign.png";
 import digitalMarketing from "../constants/Images/digital marketing.png";
 import graphicDesign from "../constants/Images/graphic design.png";
-import webApp from "../constants/Images/app dev.png";
+import webApp from "../constants/Images/appdev.png";
 import socialMedia from "../constants/Images/social media.png";
 import websiteMaintenance from "../constants/Images/web maitenance.png";
 import { MdDoubleArrow } from "react-icons/md";

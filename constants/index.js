@@ -5,6 +5,7 @@ import { MdFindInPage } from "react-icons/md";
 import { MdDesignServices } from "react-icons/md";
 import { MdNextPlan } from "react-icons/md";
 import { BiSolidShip } from "react-icons/bi";
+import { BiCheckCircle } from "react-icons/bi";
 
 export const navLinks = [
   { name: "Home", href: "/" },
@@ -20,13 +21,13 @@ export const navLinks = [
 ];
 
 export const subServices = [
-  { name: "Web Design", href: "/webdesign" },
-  { name: "Digital Marekting", href: "/digitalmarketing" },
-  { name: "Graphic Design", href: "/graphicdesign" },
-  { name: "WebApp Development", href: "/webapp" },
-  { name: "Social Media Management", href: "/socialmedia" },
-  { name: "Web Maintenance", href: "/maintenance" },
-  { name: "Work Process", href: "/work_process" },
+  { name: "Web Design", href: "/services/#webdesign" },
+  { name: "Digital Marekting", href: "/services/#digitalmarketing" },
+  { name: "Graphic Design", href: "/services/#graphicdesign" },
+  { name: "WebApp Development", href: "services/#webapp" },
+  { name: "Social Media Management", href: "services/#socialmedia" },
+  { name: "Web Maintenance", href: "/services/#maintenance" },
+  { name: "Work Process", href: "/services/#work_process" },
 ];
 
 export const work = [
@@ -67,5 +68,126 @@ export const work_process = [
     name: "4. Launch",
     icon: <BiSolidShip style={{ fontSize: "6rem", color: "#FC6736" }} />,
     desc: "This stage we present the website to the client, offer basic operation training and then we go live",
+  },
+];
+
+export const marketingDetails = [
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Strategy development",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Multi-channel campaign",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Content marketing",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "SEO and SEM practices",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Email marketing",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Performance tracking",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Conversion optimization",
+  },
+];
+export const socialMediaDetails = [
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Consistent branding",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Engaging content",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Social media advertising",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Reputation management",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Influencer outreach",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Social media analytics",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Community building",
+  },
+];
+export const graphicDesignDetails = [
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Tailored designs",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Infographics design",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Social media graphics",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Packaging design",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Brand identity design",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Data visualization",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Presentations design",
+  },
+];
+export const designDetails = [
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Responsive design",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "User-centric designs",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "SEO-friendly design",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Integration with CMS",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Fast load times",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Secure website",
+  },
+  {
+    icon: <BiCheckCircle style={{ fontSize: "1.2rem", color: "#FC6736" }} />,
+    text: "Shop functionality",
   },
 ];

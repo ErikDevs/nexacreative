@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import { rowdies } from "@/fonts/fonts";
+import { rowdies, syne } from "@/fonts/fonts";
 import Smile from "@/public/smile.png";
 import Image from "next/image";
 
@@ -11,11 +11,11 @@ const HeroSection = () => {
       id="hero"
       className="container overflow-hidden mx-auto flex md:mt-10 space-y-12 md:space-y-0 md:space-x-8 flex-col-reverse md:flex-row"
     >
-      <div className="flex flex-col justify-center space-y-12 md:w-1/2">
+      <div className="flex flex-col justify-center space-y-10 md:w-1/2">
         <h1
-          className={` ${rowdies.className} max-w-md text-4xl z-10 text-center md:text-5xl md:text-left`}
+          className={`${syne.className} text-4xl z-10 text-center md:text-6xl md:max-w-md font-bold md:text-left`}
         >
-          Transforming ideas into visual masterpieces
+          Transforming Ideas Into Visual Masterpieces
         </h1>
         <p className="max-w-sm text-center md:text-left">
           Our mission is to transform your business into a digital legend,

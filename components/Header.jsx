@@ -6,28 +6,32 @@ import { TiAdjustBrightness } from "react-icons/ti";
 import { TiAdjustContrast } from "react-icons/ti";
 import { FiAlignLeft } from "react-icons/fi";
 import { MdOutlineExpandMore } from "react-icons/md";
-import { MdExpandLess } from "react-icons/md";
-
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { navLinks, subServices } from "@/constants";
 import { useState } from "react";
 import { sora } from "@/fonts/fonts";
+import { BiPlus } from "react-icons/bi";
+import { BiMinus } from "react-icons/bi";
+import { MdClose } from "react-icons/md";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
   const [index, setIndex] = useState(0);
+  const [index1, setIndex1] = useState(null);
   const [menu, setMenu] = useState(false);
   const [subMenu, setSubMenu] = useState(false);
 
   return (
     <nav
-      className={`${sora.className}  flex items-center justify-between z-50  h-20 container px-6 lg:px-20 mx-auto`}
+      className={`${sora.className} ${
+        theme === "dark" ? "text-slate-100" : "text-blue-950"
+      } flex items-center justify-between z-50  h-20 container px-6 lg:px-20 mx-auto`}
     >
       {/* logo */}
       <div className="lg:hidden cursor-pointer z-50 hover:scale-105">
         <FiAlignLeft
-          onClick={() => setMenu(!menu)}
+          onClick={() => setMenu(true)}
           style={{ fontSize: "2em" }}
         />
       </div>
@@ -40,114 +44,120 @@ const Header = () => {
           />
         </Link>
       </div>
-      {/* Menu items */}
-      <ul className="hidden lg:flex space-x-6">
+
+      {/* Desktop Menu items */}
+      <ul className="hidden lg:flex relative  space-x-6">
         {navLinks.map((link, i) => (
           <Link
             onClick={() => setIndex(i)}
             key={link.name}
             href={link.href}
             className={`${
-              index === i ? "text-brightRed" : "hover-underline-animation"
-            }  transition-all`}
+              index === i && index != 2 ? "text-brightRed" : ""
+            } transition-all`}
           >
-            <span className="flex justify-end items-center">
-              {link.name}
-              {!subMenu ? (
-                <MdOutlineExpandMore
-                  className={`${i === 2 ? "block" : "hidden"} ml-4`}
-                  onClick={() => setSubMenu(!subMenu)}
-                />
-              ) : (
-                <MdExpandLess
-                  onClick={() => setSubMenu(false)}
-                  className={`${i === 2 ? "block" : "hidden"} ml-4`}
-                />
-              )}
-            </span>
-            <div
-              className={`${
-                i === 2
-                  ? `flex flex-col absolute top-16 z-50 rounded-md  w-72 p-6 shadow-md gap-y-5`
-                  : "hidden"
-              } ${
-                theme === "dark" ? "text-white bg-black" : "text-black bg-white"
-              } ${subMenu ? "opacity-1 visible" : "opacity-0 hidden"}`}
-            >
-              {subServices.map((subSevice, i) => (
-                <Link
-                  onClick={() => setSubMenu(!subMenu)}
-                  className="hover-underline-animation"
-                  key={i}
-                  href={subSevice}
+            {i === 2 ? (
+              <span className="flex menu items-center gap-2">
+                {link.name} <MdOutlineExpandMore />
+                <ul
+                  className={`${
+                    theme === "dark" ? "bg-black" : "bg-white shadow-md"
+                  } hidden showMenu p-4 rounded-md flex-col absolute gap-4 z-50  top-6`}
                 >
-                  {subSevice.name}
-                </Link>
-              ))}
-            </div>
+                  {subServices.map((subLink, i) => (
+                    <Link
+                      onClick={() => setIndex1(i)}
+                      className={`${
+                        index1 === i ? "text-brightRed" : ""
+                      } hover:scale-105`}
+                      key={subLink.name}
+                      href={subLink.href}
+                    >
+                      {subLink.name}
+                    </Link>
+                  ))}
+                </ul>
+              </span>
+            ) : (
+              <span className="hover:text-brightRed transition color duration-150 ease-in-out">
+                {link.name}
+              </span>
+            )}
           </Link>
         ))}
       </ul>
+
+      {/* sub menu */}
+
       {/* mobile menu Menu items */}
 
       <ul
-        className={`${theme === "dark" ? "bg-black" : "bg-white"} ${
+        className={`${
+          theme === "dark" ? "bg-blue-950 text-white" : "bg-black text-white"
+        } ${
           menu ? "move-in" : "move-out"
-        } transition duration-300 ease-in-out lg:hidden flex flex-col justify-normal w-2/3 right-0  p-6 absolute top-0 h-[100vh] z-50 gap-y-8`}
+        } transition duration-300 ease-in-out lg:hidden flex flex-col justify-normal w-2/3 right-0  p-6 absolute top-0 h-[800px]  overflow-hidden pt-16 z-50 gap-y-8`}
       >
         {navLinks.map((link, i) => (
-          <Link
-            onClick={() => {
-              setIndex(i);
-              setMenu(false);
-            }}
-            key={link.name}
-            href={link.href}
-            className={`${
-              index === i ? "text-brightRed" : "hover-underline-animation"
-            }  transition-all`}
-          >
-            <span className="flex items-center justify-between">
-              {link.name}
-              {!subMenu ? (
-                <MdOutlineExpandMore
-                  className={`${i === 2 ? "block" : "hidden"} ml-4`}
-                  onClick={() => setSubMenu(!subMenu)}
-                />
-              ) : (
-                <MdExpandLess
-                  onClick={() => setSubMenu(false)}
-                  className={`${i === 2 ? "block" : "hidden"} ml-4`}
-                />
-              )}
-            </span>
-
-            <div
-              className={`${i === 2 ? `flex flex-col  gap-y-5` : "hidden"} ${
-                theme === "dark" ? "text-white bg-black" : "text-black bg-white"
-              } ${
-                subMenu
-                  ? "block h-[100%] transition duration-1000"
-                  : "hidden h-[-100%] transition duration-1000"
-              } lg:hidden  ease-in-out mt-2`}
-            >
-              {subServices.map((subSevice, i) => (
-                <Link
-                  onClick={() => setSubMenu(!subMenu)}
-                  className="hover-underline-animation"
-                  key={subSevice.name}
-                  href={subSevice.href}
+          <Link key={link.name} href={link.href}>
+            {i === 2 ? (
+              <div className="flex flex-col">
+                <span className="flex gap-8 items-center">
+                  {link.name}{" "}
+                  {!subMenu ? (
+                    <BiPlus
+                      className="bg-blue-700"
+                      style={{ fontSize: "1.5em" }}
+                      onClick={() => setSubMenu(true)}
+                    />
+                  ) : (
+                    <BiMinus
+                      className="bg-blue-700"
+                      style={{ fontSize: "1.5em" }}
+                      onClick={() => setSubMenu(false)}
+                    />
+                  )}
+                </span>
+                <hr className="h-1 w-full mt-2" />
+                <ul
+                  className={`${
+                    subMenu ? "flex opacity-100" : "hidden opacity-0"
+                  } flex-col ml-4 gap-12" transition opacity duration-500  ease-in-out`}
                 >
-                  {subSevice.name}
-                </Link>
-              ))}
-            </div>
+                  {subServices.map((sublink) => (
+                    <Link key={sublink.name} href={sublink.href}>
+                      <span className="flex flex-col justify-center gap-2">
+                        {sublink.name}
+                        <hr className="h-1 w-full" />
+                      </span>
+                    </Link>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <span className="flex flex-col justify-center">
+                <span onClick={() => setMenu(false)}>{link.name}</span>
+                <hr className="h-1 w-full mt-2" />
+              </span>
+            )}
           </Link>
         ))}
+        <MdClose
+          style={{ fontSize: "1.5rem" }}
+          onClick={() => setMenu(false)}
+          className="absolute top-6 hover:bg-red-500 transform transition duration-300"
+        />
         <button className="block md:hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline">
           Get a quote
         </button>
       </ul>
+
+      <div
+        onClick={() => setMenu(false)}
+        className={`${menu ? "overlay z-30" : ""}`}
+      ></div>
+
+      {/* end of mobile menu */}
       <div className="flex flex-row gap-8">
         <button className="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline">
           Get a quote
