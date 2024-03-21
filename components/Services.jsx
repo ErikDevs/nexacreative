@@ -2,8 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import webDesign from "../constants/Images/webdesign.png";
-import digitalMarketing from "../constants/Images/digital marketing.png";
-import graphicDesign from "../constants/Images/graphic design.png";
+import digitalMarketing from "../constants/Images/digitalmarketing.png";
+import graphicDesign from "../constants/Images/graphicdesign.png";
 import webApp from "../constants/Images/appdev.png";
 import socialMedia from "../constants/Images/socialmedia.png";
 import websiteMaintenance from "../constants/Images/webmaitenance.png";
