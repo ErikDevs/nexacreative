@@ -7,7 +7,7 @@ import { BiPieChart } from "react-icons/bi";
 import { BiDiamond } from "react-icons/bi";
 import Webdesign from "@/public/webdesign.jpg";
 import DigitalMarketing from "@/public/digitalMarketing.jpg";
-import MediaDigital from "@/public/media.jpg";
+import MediaDigital from "@/public/socialMedia.jpg";
 import GraphicDesign from "@/public/graphicDesign.jpg";
 import {
   designDetails,
