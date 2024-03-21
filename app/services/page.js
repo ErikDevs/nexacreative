@@ -7,7 +7,7 @@ import { BiPieChart } from "react-icons/bi";
 import { BiDiamond } from "react-icons/bi";
 import Webdesign from "@/public/webdesign.jpg";
 import DigitalMarketing from "@/public/digitalMarketing.jpg";
-import SocialMedia from "@/public/socialMedia.jpg";
+import Socialmedia from "@/public/socialMedia.jpg";
 import GraphicDesign from "@/public/graphicDesign.jpg";
 import {
   designDetails,
@@ -152,7 +152,7 @@ export default function App() {
         >
           <div className="overflow-hidden">
             <Image
-              src={SocialMedia}
+              src={Socialmedia}
               className="hover:scale-125  h-[100%] transform transition duration-500 ease-linear"
             />
           </div>
