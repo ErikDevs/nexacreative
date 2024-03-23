@@ -2,7 +2,6 @@
 import Image from "next/image";
 import logoDark from "../public/DarkLogo.png";
 import logoWhite from "../public/logo-white.png";
-import { TiAdjustBrightness } from "react-icons/ti";
 import { TiAdjustContrast } from "react-icons/ti";
 import { FiAlignLeft } from "react-icons/fi";
 import { MdOutlineExpandMore } from "react-icons/md";
@@ -14,7 +13,7 @@ import { sora } from "@/fonts/fonts";
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 import { MdClose } from "react-icons/md";
-import Button from "./button";
+import Button from "./Button";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
