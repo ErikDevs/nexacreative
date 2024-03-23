@@ -8,6 +8,7 @@ import { BiDiamond } from "react-icons/bi";
 import Webdesign from "@/public/webdesign.jpg";
 import DigitalMarketing from "@/public/digitalMarketing.jpg";
 import GraphicDesign from "@/public/graphicDesign.jpg";
+import SocialMediaImage from "@/public/sci.jpg";
 import {
   designDetails,
   graphicDesignDetails,
@@ -25,7 +26,7 @@ export default function App() {
         <div className="w-full md:h-[60vh] overflow-hidden relative">
           <Image src={Agency} className="object-contain md:-mt-56" />
           <h1
-            className={`${syne.className} absolute top-32 bottom-0 right-0 left-0 z-10 text-white text-6xl md:text-7xl font-bold text-center w-full`}
+            className={`${syne.className} absolute top-[40%] z-10 text-white md:text-6xl text-4xl font-bold text-center w-full`}
           >
             Our Services
           </h1>
@@ -71,6 +72,7 @@ export default function App() {
       </section>
       <section className="container px-6 lg:px-10 grid grid-cols-1 mt-20 gap-20 md:grid-cols-2">
         <div
+          id="webdesign"
           className={`${
             theme === "dark" ? "bg-gray-900" : "bg-slate-200"
           } relative grid grid-cols-1 gap-8 py-16 px-10 rounded-sm largeDiv lg:grid-cols-2 `}
@@ -108,6 +110,7 @@ export default function App() {
         </div>
         {/* end web design */}
         <div
+          id="digitalmarketing"
           className={`${
             theme === "dark" ? "bg-gray-900" : "bg-slate-200"
           } relative grid grid-cols-1 gap-8 py-16 px-10 rounded-sm largeDiv lg:grid-cols-2 `}
@@ -151,7 +154,7 @@ export default function App() {
         >
           <div className="overflow-hidden">
             <Image
-              src={DigitalMarketing}
+              src={SocialMediaImage}
               className="hover:scale-125  h-[100%] transform transition duration-500 ease-linear"
             />
           </div>

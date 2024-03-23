@@ -22,7 +22,7 @@ export default function Page() {
             alt="designer"
           />
           <h1
-            className={`${syne.className} absolute top-32 bottom-0 right-0 left-0 z-10 text-white text-6xl md:text-7xl font-bold text-center w-full`}
+            className={`${syne.className} absolute top-[40%] z-10 text-white text-6xl md:text-7xl font-bold text-center w-full`}
           >
             About Us
           </h1>
@@ -31,9 +31,11 @@ export default function Page() {
       </div>
       <section className="container px-6 lg:px-10 w-full flex mt-20 justify-between flex-col-reverse gap-4 lg:gap-32 lg:flex-row -z-50">
         <div className="flex w-full lg:max-w-lg flex-col">
-          <h1 className="text-4xl font-bold text-brightRed">About Us</h1>
+          <h1 className="text-4xl font-bold text-brightRed">
+            Nexa Creative Solutions
+          </h1>
           <p className="mt-6 md:mt-10">
-            Nexa Creative was established in 2017. Since that time, we have
+            Nexa Creative was established in 2020. Since that time, we have
             worked with our clients to offer creative ideas and online marketing
             support to ensure you receive the best possible return on your
             investment. Over the years, we have served many clients, from
@@ -47,18 +49,20 @@ export default function Page() {
             strategy that is both efficient and cost-effective.
           </p>
         </div>
-        <div className="w-auto relative mb-16">
+        <div className="lg:w-[50%] relative mb-16">
           <Image
             src={Designers}
             className="object-cover rounded-sm"
             alt="image"
           />
-          <div className="md:1/2 ml-4 md:ml-0 w-[100px] h-[100px] bg-brightRed absolute -z-10 -top-4 md:-top-6 -left-8 md:-left-6 right-0"></div>
-          <div className="md:1/2 ml-4 md:ml-0 w-[100px] h-[120px] bg-blue-950 absolute -z-10 -bottom-6 -right-6 md-right-6 "></div>
+          <div className="ml-4 md:ml-0 w-[150px] h-[80px] bg-brightRed absolute -z-10 -top-4 md:-top-6 -left-8 md:-left-6 right-0"></div>
+          <div className="ml-4 md:ml-0 w-[150px] h-[80px] bg-gray-500 absolute rounded-md flex justify-center items-center text-2xl z-10 -bottom-6 -right-6 md-right-6 ">
+            2020
+          </div>
         </div>
       </section>
       <section className="container px-6 lg:px-10 w-full mt-36">
-        <div className="flex justify-center rounded-full">
+        <div className="flex justify-center  rounded-full">
           <div
             onClick={() => {
               setWhy(true);
@@ -112,21 +116,19 @@ export default function Page() {
         </div>
         <div
           className={`${
-            showWork ? "block" : "hidden"
-          } container grid grid-cols-1 gap-1 mt-20 md:grid-cols-3 lg:grid-cols-4`}
+            showWork ? "grid" : "hidden"
+          } container w-full mx-auto grid-cols-1 gap-2 mt-20 md:grid-cols-3 lg:grid-cols-4`}
         >
           {work_process.map((work) => (
             <div
               key={work.name}
-              className={`${
-                theme === "dark" ? "bg-gray-700" : "bg-slate-200"
-              } flex justify-center max-w-md hover:scale-105 p-6 rounded-md flex-col`}
+              className={`flex hover:scale-105 p-8 w-full rounded-md flex-col`}
             >
               <i className="flex justify-center">{work.icon}</i>
-              <h2 className="text-center text-xl font-semibold mb-6 mt-10">
+              <h2 className="text-center text-xl  font-semibold mb-6 mt-10">
                 {work.name}
               </h2>
-              <p className="text-center">{work.desc}</p>
+              <p className="text-center max-w-sm">{work.desc}</p>
             </div>
           ))}
         </div>

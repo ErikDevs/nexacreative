@@ -14,6 +14,7 @@ import { sora } from "@/fonts/fonts";
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 import { MdClose } from "react-icons/md";
+import Button from "./button";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -26,7 +27,7 @@ const Header = () => {
     <nav
       className={`${sora.className} ${
         theme === "dark" ? "text-slate-100" : "text-blue-950"
-      } flex items-center justify-between z-50  h-20 container px-6 lg:px-20 mx-auto`}
+      } flex items-center justify-between z-50 container px-6 py-8 text-lg lg:px-36 mx-auto`}
     >
       {/* logo */}
       <div className="lg:hidden cursor-pointer z-50 hover:scale-105">
@@ -61,8 +62,8 @@ const Header = () => {
                 {link.name} <MdOutlineExpandMore />
                 <ul
                   className={`${
-                    theme === "dark" ? "bg-black" : "bg-white shadow-md"
-                  } hidden showMenu p-4 rounded-md flex-col absolute gap-4 z-50  top-6`}
+                    theme === "dark" ? "bg-blue-950" : "bg-white shadow-md"
+                  } hidden showMenu p-6 rounded-md flex-col absolute gap-4 z-50   top-8`}
                 >
                   {subServices.map((subLink, i) => (
                     <Link
@@ -125,7 +126,11 @@ const Header = () => {
                   } flex-col ml-4 gap-12" transition opacity duration-500  ease-in-out`}
                 >
                   {subServices.map((sublink) => (
-                    <Link key={sublink.name} href={sublink.href}>
+                    <Link
+                      key={sublink.name}
+                      href={sublink.href}
+                      onClick={() => setMenu(false)}
+                    >
                       <span className="flex flex-col justify-center gap-2">
                         {sublink.name}
                         <hr className="h-1 w-full" />
@@ -147,9 +152,7 @@ const Header = () => {
           onClick={() => setMenu(false)}
           className="absolute top-6 hover:bg-red-500 transform transition duration-300"
         />
-        <button className="block md:hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline">
-          Get a quote
-        </button>
+        <Button className="block md:hidden" name="Get a quote" />
       </ul>
 
       <div
@@ -158,27 +161,26 @@ const Header = () => {
       ></div>
 
       {/* end of mobile menu */}
-      <div className="flex flex-row gap-8">
-        <button className="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline">
-          Get a quote
-        </button>
+
+      <div className="flex flex-row items-center gap-8">
+        <Button name="Get a quote" className="hidden flex-1 md:block" />
         {theme == "dark" ? (
-          <button onClick={() => setTheme("light")}>
+          <i onClick={() => setTheme("light")}>
             <TiAdjustContrast
               className="scale transition duration-300 hover:scale-110"
               style={{ fontSize: "1.5em" }}
             />
-          </button>
+          </i>
         ) : (
-          <button
+          <i
             className="hover:shadow-lg rounded-full px-2.5 py-2  transition duration-300"
             onClick={() => setTheme("dark")}
           >
-            <TiAdjustBrightness
+            <TiAdjustContrast
               className="scale transition duration-300 hover:scale-110"
               style={{ fontSize: "1.5em" }}
             />
-          </button>
+          </i>
         )}
       </div>
     </nav>

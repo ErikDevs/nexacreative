@@ -24,10 +24,9 @@ export const subServices = [
   { name: "Web Design", href: "/services/#webdesign" },
   { name: "Digital Marekting", href: "/services/#digitalmarketing" },
   { name: "Graphic Design", href: "/services/#graphicdesign" },
-  { name: "WebApp Development", href: "services/#webapp" },
-  { name: "Social Media Management", href: "services/#socialmedia" },
+  { name: "App Development", href: "services/#webapp" },
+  { name: "Social Media", href: "services/#socialmedia" },
   { name: "Web Maintenance", href: "/services/#maintenance" },
-  { name: "Work Process", href: "/services/#work_process" },
 ];
 
 export const work = [

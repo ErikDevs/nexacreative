@@ -13,7 +13,7 @@ export default function Home() {
     <main
       className={`${
         theme === "dark" ? "text-slate-100" : "text-blue-950"
-      } px-6 lg:px-24 mx-auto"`}
+      } px-6 lg:px-36 mx-auto overflow-hidden"`}
     >
       <HeroSection />
       <Features />
