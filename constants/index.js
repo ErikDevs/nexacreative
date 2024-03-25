@@ -190,3 +190,11 @@ export const designDetails = [
     text: "Shop functionality",
   },
 ];
+
+export const categories = [
+  { name: "All" },
+  { name: "Web Design" },
+  { name: "Graphic Design" },
+  { name: "Digital Marketing" },
+  { name: "Social Media" },
+];

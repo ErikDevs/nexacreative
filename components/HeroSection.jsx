@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <div
       id="hero"
-      className="container bg-transparent overflow-hidden mx-auto flex md:mt-10 space-y-12 md:space-y-0 md:space-x-8 flex-col-reverse md:flex-row"
+      className="container bg-transparent overflow-hidden  mx-auto flex md:mt-20 space-y-12 md:space-y-0 md:space-x-8 flex-col-reverse md:flex-row"
     >
       <div className="flex flex-col justify-center space-y-10 md:w-1/2">
         <h1
@@ -26,9 +26,11 @@ const HeroSection = () => {
             Bring your business online - it's Free!
           </button>
         </div>
-        <button className="p-3 md:hidden px-6 pt-2 text-white bg-brightRed rounded-full baseline">
-          Get in touch
-        </button>
+        <div className="flex justify-center w-full">
+          <button className="md:hidden px-5 py-4 text-white bg-brightRed rounded-full baseline">
+            Bring your business online - it's Free!
+          </button>
+        </div>
       </div>
       <div className="flex justify-end md:w-1/2">
         <Image src={Smile} width={400} height={200} />

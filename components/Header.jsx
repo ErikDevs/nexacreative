@@ -16,7 +16,7 @@ import { MdClose } from "react-icons/md";
 import Button from "./Button";
 
 const Header = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, current } = useTheme();
   const [index, setIndex] = useState(0);
   const [index1, setIndex1] = useState(null);
   const [menu, setMenu] = useState(false);
@@ -26,7 +26,7 @@ const Header = () => {
     <nav
       className={`${sora.className} ${
         theme === "dark" ? "text-slate-100" : "text-blue-950"
-      } flex items-center justify-between z-50 container px-6 py-8 text-lg lg:px-36 mx-auto`}
+      } flex items-center justify-between z-50 container px-6 py-8 absolute top-0 text-lg lg:px-36 mx-auto bg-transparent`}
     >
       {/* logo */}
       <div className="lg:hidden cursor-pointer z-50 hover:scale-105">

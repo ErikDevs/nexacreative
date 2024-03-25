@@ -25,7 +25,7 @@ const Footer = () => {
         theme === "dark" ? "bg-gray-900" : "bg-slate-100"
       } mt-10 px-6 py-16 lg:px-24 mx-auto text-base`}
     >
-      <div className="container grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-between w-full">
+      <div className="container flex justify-between flex-wrap w-full">
         <div className="flex flex-col">
           {/* logo */}
           <div className="w-28 mb-10">
@@ -36,7 +36,7 @@ const Footer = () => {
             />
           </div>
           <div className="max-w-xs">
-            <p className="font-light text-md">
+            <p className="text-md">
               Nexa Creative Solutions offers outstanding Web Design in Kenya –
               We are the best Web Design company in Kenya and East Africa
             </p>
@@ -75,20 +75,20 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="flex mt-10 md:mt-16 flex-col font-medium">
+        <div className="flex mt-10 md:mt-16 gap-2 flex-col font-medium">
           <h2 className="font-bold mb-2">Quick links</h2>
           {navLinks.map((link, i) => (
             <Link
               onClick={() => setIndex(i)}
               key={i}
-              className={`${index === i ? "text-brightRed" : ""} font-light`}
+              className={`${index === i ? "text-brightRed" : ""} `}
               href={link.href}
             >
               {link.name}
             </Link>
           ))}
         </div>
-        <div className="flex mt-10 md:mt-16 flex-col font-light">
+        <div className="flex mt-10 md:mt-16 flex-col">
           <h2 className="font-bold mb-2">Our Services</h2>
           <Link href="#">Web Design</Link>
           <Link href="#">Web Redesign</Link>
@@ -102,7 +102,7 @@ const Footer = () => {
             Sign up for our monthly newsletter to get latest updates. Do not
             worry, we will never spam you.
           </p>
-          <div className="flex justify-between mt-4 max-w-xs items-center">
+          <div className="flex justify-between mt-4  items-center">
             <input
               type="text"
               className="flex-1 p-2 rounded-l-xl focus:outline-none"

@@ -24,16 +24,20 @@ export default function App() {
     <main className="">
       <section className="flex flex-col-reverse md:flex-row">
         <div className="w-full md:h-[60vh] overflow-hidden relative">
-          <Image src={Agency} className="object-contain md:-mt-56" />
+          <Image src={Agency} className="object-contain md:-mt-48" />
           <h1
-            className={`${syne.className} absolute top-[40%] z-10 text-white md:text-6xl text-4xl font-bold text-center w-full`}
+            className={`${syne.className} absolute top-[40%] z-10 md:text-6xl text-4xl font-bold text-center w-full`}
           >
             Our Services
           </h1>
-          <div className="overlay2 h-full"></div>
+          <div
+            className={`${
+              theme === "dark" ? "bg-black/50" : "bg-white/75"
+            } absolute top-0 bottom-0 right-0 left-0 w-full`}
+          ></div>
         </div>
       </section>
-      <section className="container px-6 lg:px-10 flex mt-10 gap-x-20 flex-col md:flex-row">
+      <section className="container px-6 lg:px-32 flex mt-10 gap-x-20 flex-col md:flex-row">
         <div className="flex flex-col">
           <h2 className="font-bold md:max-w-md text-3xl">
             Empower your business with innovative digital solutions.
@@ -70,12 +74,12 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="container px-6 lg:px-10 grid grid-cols-1 mt-20 gap-20 md:grid-cols-2">
+      <section className="container px-6 lg:px-32 grid grid-cols-1 mt-20 gap-8 md:grid-cols-2">
         <div
           id="webdesign"
           className={`${
             theme === "dark" ? "bg-gray-900" : "bg-slate-200"
-          } relative grid grid-cols-1 gap-8 py-16 px-10 rounded-sm largeDiv lg:grid-cols-2 `}
+          } relative grid grid-cols-1 gap-8 p-6 rounded-sm largeDiv lg:grid-cols-2 `}
         >
           <div className="overflow-hidden">
             <Image
@@ -113,7 +117,7 @@ export default function App() {
           id="digitalmarketing"
           className={`${
             theme === "dark" ? "bg-gray-900" : "bg-slate-200"
-          } relative grid grid-cols-1 gap-8 py-16 px-10 rounded-sm largeDiv lg:grid-cols-2 `}
+          } relative grid grid-cols-1 gap-8 p-6 rounded-sm largeDiv lg:grid-cols-2 `}
         >
           <div className="overflow-hidden">
             <Image

@@ -7,8 +7,8 @@ const Testmonials = () => {
   return (
     <div className="container my-16 mx-auto">
       <h1 className="text-lg">Testmonials</h1>
-      <div className="flex flex-col md:flex-row justify-evenly">
-        <h1 className="text-2xl md:text-4xl font-bold text-left">
+      <div className="flex flex-col md:flex-row justify-between">
+        <h1 className="text-2xl md:text-4xl md:max-w-md font-bold text-left">
           Our success, as echoed by our esteemed clients
         </h1>
         <h2 className="text-lg font-semi-bold max-w-md text-gray-400">

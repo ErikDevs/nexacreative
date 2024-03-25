@@ -1,23 +1,19 @@
-"use client";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import brandingItem from "../constants/Images/branding.png";
 import Redgeinternational from "../constants/Images/redgeinternational.png";
 import React from "react";
 
 const Portfolio = () => {
-  const { theme } = useTheme();
-
   return (
     <section className="container px mt-16">
       <h1 className="text-4xl font-bold text-center mx-auto my-10">
         <span>-</span> Portfolio <span>-</span>{" "}
       </h1>
       <div className="flex flex-col md:flex-row space-y-2 space-x-0 md:space-y-0 md:space-x-12">
-        <h1 className="text-2xl md:text-4xl max-w-md text-center md:text-left font-bold">
+        <h1 className="text-2xl md:text-4xl max-w-md mb-2 font-bold">
           Creating impact with every project, experience the innovation.
         </h1>
-        <p className="text-gray-400 text-center md:text-left text-base max-w-md">
+        <p className="text-gray-400 text-left text-base max-w-md">
           A showcase of our commitment to delivering top-tier, innovative
           digital solutions. We believe in the power of technology and design to
           transform businesses, catapulting them into the future. Our commitment

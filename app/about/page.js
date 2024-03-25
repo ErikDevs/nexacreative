@@ -11,25 +11,29 @@ import { useTheme } from "next-themes";
 export default function Page() {
   const [showWhy, setWhy] = useState(true);
   const [showWork, setWork] = useState(false);
-  const { theme } = useTheme("dark");
+  const { theme } = useTheme();
   return (
     <main className="flex flex-col">
       <div className="relative">
-        <div className="w-full md:h-[60vh] relative overflow-hidden">
+        <div className="w-full md:h-[60vh] relative overflow-y-hidden">
           <Image
             className="object-contain md:-mt-20"
             src={Designer}
             alt="designer"
           />
           <h1
-            className={`${syne.className} absolute top-[40%] z-10 text-white text-6xl md:text-7xl font-bold text-center w-full`}
+            className={`${syne.className} absolute top-[40%] z-10 text-4xl md:text-6xl font-bold text-center w-full`}
           >
             About Us
           </h1>
-          <div className="overlay2"></div>
+          <div
+            className={`${
+              theme === "dark" ? "bg-black/50" : "bg-white/75"
+            } overlay2`}
+          ></div>
         </div>
       </div>
-      <section className="container px-6 lg:px-10 w-full flex mt-20 justify-between flex-col-reverse gap-4 lg:gap-32 lg:flex-row -z-50">
+      <section className="container px-6 lg:px-32 w-full flex mt-20 justify-between flex-col-reverse gap-4 lg:gap-32 lg:flex-row -z-50">
         <div className="flex w-full lg:max-w-lg flex-col">
           <h1 className="text-4xl font-bold text-brightRed">
             Nexa Creative Solutions
@@ -56,7 +60,7 @@ export default function Page() {
             alt="image"
           />
           <div className="ml-4 md:ml-0 w-[150px] h-[80px] bg-brightRed absolute -z-10 -top-4 md:-top-6 -left-8 md:-left-6 right-0"></div>
-          <div className="ml-4 md:ml-0 w-[150px] h-[80px] bg-gray-500 absolute rounded-md flex justify-center items-center text-2xl z-10 -bottom-6 -right-6 md-right-6 ">
+          <div className="ml-4 md:ml-0 w-[150px] h-[80px] bg-gray-500 absolute text-white rounded-md flex justify-center items-center text-2xl z-10 -bottom-6 -right-6 md-right-6 ">
             2020
           </div>
         </div>

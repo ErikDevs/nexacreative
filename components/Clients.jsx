@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import rafikiConcept from "../constants/Images/rafiki-concepts-logo.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
