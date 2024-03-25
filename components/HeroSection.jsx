@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <div
       id="hero"
-      className="container bg-transparent overflow-hidden  mx-auto flex md:mt-20 space-y-12 md:space-y-0 md:space-x-8 flex-col-reverse md:flex-row"
+      className="container bg-transparent overflow-hidden  mx-auto flex md:mt-32 space-y-12 md:space-y-0 md:space-x-8 flex-col-reverse md:flex-row"
     >
       <div className="flex flex-col justify-center space-y-10 md:w-1/2">
         <h1
