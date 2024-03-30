@@ -37,8 +37,23 @@
   transform-origin: bottom left;
 }
 
+.hide {
+  height: 0;
+  transform: translateX(-120%);
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) ease-out;
+}
+
+.show {
+  margin-top: 20px;
+  height: 100%;
+  transform: translateX(0);
+  transition-property: height transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
 .move-out {
-  transform: translateX(1000px);
+  transform: translateX(100%);
   transition: all cubic-bezier(0.39, 0.575, 0.565, 1) ease-out;
   opacity: 0;
 }

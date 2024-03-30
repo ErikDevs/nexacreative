@@ -2,7 +2,6 @@
 import Image from "next/image";
 import logoDark from "../public/DarkLogo.png";
 import logoWhite from "../public/logo-white.png";
-import { TiAdjustContrast } from "react-icons/ti";
 import { FiAlignLeft } from "react-icons/fi";
 import { MdOutlineExpandMore } from "react-icons/md";
 import { useTheme } from "next-themes";
@@ -16,7 +15,7 @@ import { MdClose } from "react-icons/md";
 import Button from "./Button";
 
 const Header = () => {
-  const { theme, setTheme, current } = useTheme();
+  const { theme } = useTheme();
   const [index, setIndex] = useState(0);
   const [index1, setIndex1] = useState(null);
   const [menu, setMenu] = useState(false);
@@ -24,9 +23,9 @@ const Header = () => {
 
   return (
     <nav
-      className={`${sora.className} ${
+      className={` ${
         theme === "dark" ? "text-slate-100" : "text-blue-950"
-      } flex items-center justify-between z-50 container px-6 py-8 absolute top-0 text-lg lg:px-36 mx-auto bg-transparent`}
+      } flex items-center justify-between z-50 container px-6 absolute top-4 lg:px-36 mx-auto bg-transparent`}
     >
       {/* logo */}
       <div className="lg:hidden cursor-pointer z-50 hover:scale-105">
@@ -53,7 +52,7 @@ const Header = () => {
             key={link.name}
             href={link.href}
             className={`${
-              index === i && index != 2 ? "text-brightRed" : ""
+              index === i && index != 2 ? "font-bold" : ""
             } transition-all`}
           >
             {i === 2 ? (
@@ -96,7 +95,7 @@ const Header = () => {
           theme === "dark" ? "bg-blue-950 text-white" : "bg-black text-white"
         } ${
           menu ? "move-in" : "move-out"
-        } transition duration-300 ease-in-out lg:hidden flex flex-col justify-normal w-2/3 right-0  p-6 absolute top-0 h-[800px]  overflow-hidden pt-16 z-50 gap-y-8`}
+        } transition duration-300 ease-in-out lg:hidden flex flex-col justify-normal w-full right-0  p-6 absolute  h-auto -top-4  pt-16 z-50 gap-y-8`}
       >
         {navLinks.map((link, i) => (
           <Link key={link.name} href={link.href}>
@@ -121,8 +120,8 @@ const Header = () => {
                 <hr className="h-1 w-full mt-2" />
                 <ul
                   className={`${
-                    subMenu ? "flex opacity-100" : "hidden opacity-0"
-                  } flex-col ml-4 gap-12" transition opacity duration-500  ease-in-out`}
+                    subMenu ? "show" : "hide"
+                  } flex flex-col ml-4 gap-2 text`}
                 >
                   {subServices.map((sublink) => (
                     <Link
@@ -149,7 +148,7 @@ const Header = () => {
         <MdClose
           style={{ fontSize: "1.5rem" }}
           onClick={() => setMenu(false)}
-          className="absolute top-6 hover:bg-red-500 transform transition duration-300"
+          className="absolute top-6 right-6 hover:scale-110 hover:translate-y-2 hover:text-brightRed transform transition duration-300"
         />
         <Button className="block md:hidden" name="Get a quote" />
       </ul>
@@ -160,28 +159,7 @@ const Header = () => {
       ></div>
 
       {/* end of mobile menu */}
-
-      <div className="flex flex-row items-center gap-8">
-        <Button name="Get a quote" className="hidden flex-1 md:block" />
-        {theme == "dark" ? (
-          <i onClick={() => setTheme("light")}>
-            <TiAdjustContrast
-              className="scale transition duration-300 hover:scale-110"
-              style={{ fontSize: "1.5em" }}
-            />
-          </i>
-        ) : (
-          <i
-            className="hover:shadow-lg rounded-full px-2.5 py-2  transition duration-300"
-            onClick={() => setTheme("dark")}
-          >
-            <TiAdjustContrast
-              className="scale transition duration-300 hover:scale-110"
-              style={{ fontSize: "1.5em" }}
-            />
-          </i>
-        )}
-      </div>
+      <Button name="Get a quote" className="hidden md:block" />
     </nav>
   );
 };

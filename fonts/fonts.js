@@ -1,10 +1,13 @@
-import { Almarai, Asap, Nunito, Rowdies, Sora, Syne } from "next/font/google";
+import { Jost, Rowdies, Sora, Syne } from "next/font/google";
+import localFont from "next/font/local";
+
+const display = localFont({ src: './Zeroes.otf' });
 
 const sora = Sora({
   subsets: ["latin"],
 });
 
-const roboto = Asap({
+const roboto = Jost({
   subsets: ["latin"],
   weight: ["variable"],
 });
@@ -18,4 +21,4 @@ const syne = Syne({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
-export { sora, roboto, rowdies, syne };
+export { sora, roboto, rowdies, syne, display };

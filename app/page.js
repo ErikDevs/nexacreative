@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main
       className={`${
-        theme === "dark" ? "text-slate-100" : "text-blue-950"
+        theme === "dark" ? "text-slate-100" : "text-darkBlue"
       } px-6 lg:px-36 mx-auto overflow-hidden"`}
     >
       <HeroSection />

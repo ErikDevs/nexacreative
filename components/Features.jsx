@@ -9,7 +9,7 @@ const Features = () => {
   return (
     <div
       id="features"
-      className="container flex flex-col mx-auto mt-32  space-y-12 md:space-x-8 md:flex-row"
+      className="container flex flex-col mx-auto mt-32   space-y-12 md:space-x-8 md:flex-row"
     >
       {/* What is diffrenece */}
       <div className="flex flex-col space-y-12 md:w-1/2">

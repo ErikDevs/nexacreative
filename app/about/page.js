@@ -61,7 +61,7 @@ export default function Page() {
           />
           <div className="ml-4 md:ml-0 w-[150px] h-[80px] bg-brightRed absolute -z-10 -top-4 md:-top-6 -left-8 md:-left-6 right-0"></div>
           <div className="ml-4 md:ml-0 w-[150px] h-[80px] bg-gray-500 absolute text-white rounded-md flex justify-center items-center text-2xl z-10 -bottom-6 -right-6 md-right-6 ">
-            2020
+            + 5 Years
           </div>
         </div>
       </section>
