@@ -8,7 +8,6 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { navLinks, subServices } from "@/constants";
 import { useState } from "react";
-import { sora } from "@/fonts/fonts";
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 import { MdClose } from "react-icons/md";

@@ -13,11 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${roboto.className} overflow-x-hidden`}>
-        <Provider>
-          <Header />
-          {children}
-          <Footer className="px-6 lg:px-24 mx-auto" />
-        </Provider>
+        <Header />
+        {children}
+        <Footer className="px-6 lg:px-24 mx-auto" />
       </body>
     </html>
   );
