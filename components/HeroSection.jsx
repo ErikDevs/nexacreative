@@ -38,7 +38,7 @@ const HeroSection = () => {
           <Image src={Smile} width={400} height={200} />
         </div>
       </div>
-      <div className="flex absolute top-0 left-0 w-{100%] -z-10 md:h-[100%] h-[145%]">
+      <div className="flex absolute top-0 left-0 w-{100%] -z-10 h-[100%]">
         <Image
           className="object-cover opacity-60 rounded-b-xl"
           src={GradientBg}
