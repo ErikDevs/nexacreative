@@ -7,13 +7,12 @@ import Portfolio from "../components/Portfolio";
 import Services from "../components/Services";
 import Testmonials from "../components/Testmonials";
 
+
 export default function Home() {
   const { theme } = useTheme();
   return (
     <main
-      className={`${
-        theme === "dark" ? "text-slate-100" : "text-darkBlue"
-      } px-6 lg:px-36 mx-auto overflow-hidden"`}
+      className={`${theme === "dark" ? "text-slate-100" : "text-darkBlue"}  px-6 lg:px-36 mx-auto overflow-hidden"`}
     >
       <HeroSection />
       <Features />

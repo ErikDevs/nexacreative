@@ -10,14 +10,13 @@ import { navLinks, subServices } from "@/constants";
 import { useState } from "react";
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
-import { MdClose } from "react-icons/md";
 import Button from "./Button";
 
 const Header = () => {
   const { theme } = useTheme();
   const [index, setIndex] = useState(0);
   const [index1, setIndex1] = useState(null);
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState();
   const [subMenu, setSubMenu] = useState(false);
 
   return (
@@ -93,24 +92,24 @@ const Header = () => {
         className={`${
           theme === "dark" ? "bg-blue-950 text-white" : "bg-black text-white"
         } ${
-          menu ? "move-in" : "move-out"
-        } transition duration-300 ease-in-out lg:hidden flex flex-col justify-normal w-full right-0  p-6 absolute h-auto scroll-my-0 -top-4 bt-32 pt-16 pb-16 z-50 gap-y-8`}
+          menu ? "move-in " : "move-out"
+        } lg:hidden flex flex-col justify-normal p-6 left-0 w-6/12 absolute   h-[1000px] scroll-smooth -top-4  z-50 gap-y-8`}
       >
         {navLinks.map((link, i) => (
           <Link key={link.name} href={link.href}>
             {i === 2 ? (
               <div className="flex flex-col">
-                <span className="flex gap-8 items-center">
+                <span className="flex justify-between items-center">
                   {link.name}{" "}
                   {!subMenu ? (
                     <BiPlus
-                      className="bg-blue-700"
+                      className="bg-blue-700 transition duration-300 ease-in-out"
                       style={{ fontSize: "1.5em" }}
                       onClick={() => setSubMenu(true)}
                     />
                   ) : (
                     <BiMinus
-                      className="bg-blue-700"
+                      className="bg-blue-700 transition duration-300 ease-in-out"
                       style={{ fontSize: "1.5em" }}
                       onClick={() => setSubMenu(false)}
                     />
@@ -129,7 +128,9 @@ const Header = () => {
                       onClick={() => setMenu(false)}
                     >
                       <span className="flex flex-col justify-center gap-2">
-                        {sublink.name}
+                        <span className="hover:text-brightRed transition-colors duration-300 ease-linear">
+                          {sublink.name}
+                        </span>
                         <hr className="h-1 w-full" />
                       </span>
                     </Link>
@@ -144,17 +145,12 @@ const Header = () => {
             )}
           </Link>
         ))}
-        <MdClose
-          style={{ fontSize: "1.5rem" }}
-          onClick={() => setMenu(false)}
-          className="absolute top-6 right-6 hover:scale-110 hover:translate-y-2 hover:text-brightRed transform transition duration-300"
-        />
-        <Button className="block mt-16  md:hidden" name="Get a quote" />
+        <Button className="block md:hidden" name="Get a quote" />
       </ul>
 
       <div
         onClick={() => setMenu(false)}
-        className={`${menu ? "overlay z-30" : ""}`}
+        className={`${menu ? "overlay z-30" : ""} `}
       ></div>
 
       {/* end of mobile menu */}
