@@ -93,7 +93,7 @@ const Header = () => {
           theme === "dark" ? "bg-blue-950 text-white" : "bg-black text-white"
         } ${
           menu ? "move-in " : "move-out"
-        } lg:hidden flex flex-col justify-normal p-6 left-0 w-1/2 absolute   h-[1000px] scroll-smooth -top-4  z-50 gap-y-8`}
+        } lg:hidden flex flex-col justify-normal p-6 left-0 w-3/4 absolute   h-[1000px] scroll-smooth -top-4  z-50 gap-y-8`}
       >
         {navLinks.map((link, i) => (
           <Link key={link.name} href={link.href}>
