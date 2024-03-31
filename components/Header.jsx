@@ -60,7 +60,7 @@ const Header = () => {
                 <ul
                   className={`${
                     theme === "dark" ? "bg-blue-950" : "bg-white shadow-md"
-                  } hidden showMenu p-6 rounded-md flex-col absolute gap-4 z-50   top-8`}
+                  } hidden showMenu p-6 rounded-md flex-col absolute gap-4 z-50 top-8`}
                 >
                   {subServices.map((subLink, i) => (
                     <Link
@@ -94,7 +94,7 @@ const Header = () => {
           theme === "dark" ? "bg-blue-950 text-white" : "bg-black text-white"
         } ${
           menu ? "move-in" : "move-out"
-        } transition duration-300 ease-in-out lg:hidden flex flex-col justify-normal w-full right-0  p-6 absolute  h-auto -top-4  pt-16 z-50 gap-y-8`}
+        } transition duration-300 ease-in-out lg:hidden flex flex-col justify-normal w-full right-0  p-6 absolute h-auto scroll-my-0 -top-4 bt-32 pt-16 pb-16 z-50 gap-y-8`}
       >
         {navLinks.map((link, i) => (
           <Link key={link.name} href={link.href}>
@@ -149,7 +149,7 @@ const Header = () => {
           onClick={() => setMenu(false)}
           className="absolute top-6 right-6 hover:scale-110 hover:translate-y-2 hover:text-brightRed transform transition duration-300"
         />
-        <Button className="block md:hidden" name="Get a quote" />
+        <Button className="block mt-16  md:hidden" name="Get a quote" />
       </ul>
 
       <div
