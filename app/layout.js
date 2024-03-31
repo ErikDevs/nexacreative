@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${roboto.className} overflow-x-hidden scroll-smooth`}>
+      <body className={`${roboto.className} text-md overflow-x-hidden scroll-smooth`}>
         <Header />
         {children}
         <Footer className="px-6 lg:px-24 mx-auto" />

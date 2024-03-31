@@ -12,6 +12,7 @@ import { MdOutlineArrowForward } from "react-icons/md";
 
 const Services = () => {
   return (
+    <div className="bg-slate-100 w-full px-6 lg:px-24 mx-auto py-10 rounded-2xl mt-16">
     <div className="container">
       <h1 className="text-4xl font-bold text-center mx-auto  my-12">
         - Our Services -
@@ -162,7 +163,8 @@ const Services = () => {
           <MdOutlineArrowForward />
         </button>
       </div>
-    </div>
+      </div>
+      </div>
   );
 };
 

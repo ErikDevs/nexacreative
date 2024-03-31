@@ -23,7 +23,7 @@ const Footer = () => {
     <footer
       className={`${
         theme === "dark" ? "bg-gray-900" : "bg-slate-100"
-      } mt-10 px-6 py-16 lg:px-24 mx-auto text-base`}
+      } mt-10 px-6 py-16 lg:px-24 mx-auto text-base rounded-b-2xl`}
     >
       <div className="container flex justify-between flex-wrap w-full">
         <div className="flex flex-col">

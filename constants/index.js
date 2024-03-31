@@ -21,12 +21,12 @@ export const navLinks = [
 ];
 
 export const subServices = [
-  { name: "Web Design", href: "/services/#webdesign" },
-  { name: "Digital Marekting", href: "/services/#digitalmarketing" },
-  { name: "Graphic Design", href: "/services/#graphicdesign" },
-  { name: "App Development", href: "services/#webapp" },
-  { name: "Social Media", href: "services/#socialmedia" },
-  { name: "Web Maintenance", href: "/services/#maintenance" },
+  { name: "Website Design & Development", href: "/services/#webdesign" },
+  { name: "Digital Marketing & SEO", href: "/services/#digitalmarketing" },
+  { name: "Graphic Design & Branding", href: "/services/#graphicdesign" },
+  { name: "WebApp Development", href: "services/#webapp" },
+  { name: "Social Media Management", href: "services/#socialmedia" },
+  { name: "Website Maintenance", href: "/services/#maintenance" },
 ];
 
 export const work = [

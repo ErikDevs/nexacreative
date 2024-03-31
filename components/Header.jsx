@@ -23,7 +23,7 @@ const Header = () => {
     <nav
       className={` ${
         theme === "dark" ? "text-slate-100" : "text-blue-950"
-      } flex items-center justify-between z-50 container px-6 absolute top-4 lg:px-36 mx-auto bg-transparent`}
+      } flex items-center justify-between z-50 container px-6 absolute pb-32 top-4 lg:px-36 mx-auto bg-transparent`}
     >
       {/* logo */}
       <div className="lg:hidden cursor-pointer z-50 hover:scale-105">
@@ -57,15 +57,13 @@ const Header = () => {
               <span className="flex menu items-center gap-2">
                 {link.name} <MdOutlineExpandMore />
                 <ul
-                  className={`${
-                    theme === "dark" ? "bg-blue-950" : "bg-white shadow-md"
-                  } hidden showMenu p-6 rounded-md flex-col absolute gap-4 z-50 top-8`}
+                  className={` shadow-lg showMenu border-t-4 border-brightRed w-[300px] p-6 flex rounded-b-md flex-col absolute gap-4 z-50 top-8`}
                 >
                   {subServices.map((subLink, i) => (
                     <Link
                       onClick={() => setIndex1(i)}
                       className={`${
-                        index1 === i ? "text-brightRed" : ""
+                        index1 === i ? "font-bold" : ""
                       } hover:scale-105`}
                       key={subLink.name}
                       href={subLink.href}

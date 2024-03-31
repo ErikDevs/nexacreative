@@ -1,17 +1,13 @@
 "use client";
 import { useTheme } from "next-themes";
-import { display, syne } from "@/fonts/fonts";
+import { syne } from "@/fonts/fonts";
 import Smile from "@/public/smile.png";
 import Image from "next/image";
-import GradientBg from "@/public/backg.jpg";
 const HeroSection = () => {
   const { theme } = useTheme();
   return (
-    <>
-      <div
-        id="hero"
-        className="container bg-transparent overflow-hidden  mx-auto flex md:mt-32 space-y-12 md:space-y-0 md:space-x-8 flex-col-reverse md:flex-row"
-      >
+    <div id="hero" className="rounded-b-2xl">
+      <div className="container overflow-hidden px-6 md:py-24 py-10 lg:px-32  mx-auto flex space-y-12 md:space-y-0 md:space-x-8 flex-col-reverse md:flex-row">
         <div className="flex flex-col justify-center space-y-10 md:w-1/2">
           <h1
             className={`${syne.className} text-4xl z-10 text-center mt-8 md:text-5xl lg:text-6xl md:max-w-md tracking-tight font-bold md:text-left`}
@@ -38,13 +34,7 @@ const HeroSection = () => {
           <Image src={Smile} width={400} height={200} />
         </div>
       </div>
-      <div className="flex absolute top-0 left-0 w-{100%] -z-10 md:h-[100%] h-[120%]">
-        <Image
-          className="object-cover opacity-60 rounded-b-xl"
-          src={GradientBg}
-        />
-      </div>
-    </>
+    </div>
   );
 };
 
