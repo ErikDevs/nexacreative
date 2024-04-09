@@ -1,4 +1,4 @@
-import { roboto } from "@/fonts/fonts";
+import { jost } from "@/fonts/fonts";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./globals.css";
@@ -11,8 +11,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${roboto.className} text-md overflow-x-hidden scroll-smooth`}>
-        <Header />
+      <body
+        className={`${jost.className} w-screen overflow-x-hidden mx-auto`}
+      >
+        <div className="">
+          <Header />
+        </div>
         {children}
         <Footer className="px-6 lg:px-24 mx-auto" />
       </body>

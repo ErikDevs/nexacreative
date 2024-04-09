@@ -6,12 +6,9 @@ import Portfolio from "../components/Portfolio";
 import Services from "../components/Services";
 import Testmonials from "../components/Testmonials";
 
-
 export default function Home() {
   return (
-    <main
-      className={`text-darkBlue mx-auto overflow-hidden"`}
-    >
+    <main className={`text-darkBlue flex justify-center w-screen flex-col mx-auto overflow-hidden"`}>
       <HeroSection />
       <Features />
       <Services />

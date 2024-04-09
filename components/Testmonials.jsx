@@ -5,7 +5,7 @@ import { BiSolidQuoteLeft } from "react-icons/bi";
 const Testmonials = () => {
   const { theme } = useTheme();
   return (
-    <div className="px-6 lg:px-24 mx-auto bg-slate-50 py-16 rounded-2xl">
+    <div className="px-6 lg:px-10 mx-auto bg-slate-50 py-16 rounded-2xl">
       <div className="container">
         <h1 className="text-lg">Testmonials</h1>
         <div className="flex flex-col md:flex-row  justify-between">

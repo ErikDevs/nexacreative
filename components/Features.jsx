@@ -6,11 +6,8 @@ import { MdDoubleArrow } from "react-icons/md";
 const Features = () => {
   const ref = useRef(null);
   return (
-    <div
-      id="features"
-      className=" mx-auto  mt-32 px-6 lg:px-24 "
-    >
-      <div className="container flex flex-col space-y-12 md:space-x-8 md:flex-row">
+    <div id="features" className=" mx-auto md:mt-32 mt-10 px-6 lg:px-10">
+      <div className="container flex flex-col justify-between md:flex-row">
         {/* What is diffrenece */}
         <div className="flex flex-col space-y-12 md:w-1/2">
           <h2 className="max-w-md text-4xl font-bold text-center md:text-left">
@@ -24,7 +21,7 @@ const Features = () => {
             website development services under one roof.
           </p>
           <div>
-            <button className="flex items-center  transition duration-300 hover:mr-6">
+            <button className="flex items-center transition duration-300 hover:mr-6">
               <Link href="/about">
                 <span className="transition duration-300 hover:mr-2">
                   Learn more
@@ -36,7 +33,7 @@ const Features = () => {
         </div>
         {/* numbered list */}
 
-        <div className="flex flex-col space-y-8 md:w-1/2">
+        <div className="flex flex-col space-y-8 max-sm:mt-10  md:w-1/2">
           {/* list item 1 */}
           <div className={`rounded-l-full md:bg-transparent`}>
             <div className="flex items-center space-x-2">

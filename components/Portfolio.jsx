@@ -5,7 +5,7 @@ import React from "react";
 
 const Portfolio = () => {
   return (
-    <div className="px-6 lg:px-24 py-16 mx-auto">
+    <div className="px-6 lg:px-10 py-16 mx-auto">
     <section className="container">
       <h1 className="text-4xl font-bold text-center mx-auto my-10">
         <span>-</span> Portfolio <span>-</span>{" "}

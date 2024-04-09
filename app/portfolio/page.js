@@ -1,5 +1,4 @@
 "use client";
-import { syne } from "@/fonts/fonts";
 import Image from "next/image";
 import React, { useState } from "react";
 import PortfolioImage from "@/public/portfolio.jpg";
@@ -9,20 +8,17 @@ import Brand from "@/constants/Images/branding.png";
 
 function page() {
   const [selected, setSelected] = useState(0);
-  const { theme } = useTheme();
   return (
     <main className="w-full mx-auto">
       <div className="container flex relative justify-center md:h-[60vh] overflow-hidden flex-col">
         <h1
-          className={`${syne.className} absolute top-[40%] z-30 text-4xl md:text-6xl  font-bold text-center w-full`}
+          className={`absolute top-[40%] z-30 text-4xl md:text-6xl text-slate-100 font-bold text-center w-full`}
         >
           Our Portfolio
         </h1>
         <Image className="md:-mt-60 w-full object-cover" src={PortfolioImage} />
         <div
-          className={`${
-            theme === "dark" ? "bg-black/50" : "bg-white/75"
-          } overlay2`}
+          className={`bg-darkBlue/50 overlay2`}
         ></div>
       </div>
       <div className="flex gap-3 justify-center flex-wrap items-center w-full mt-20 ">

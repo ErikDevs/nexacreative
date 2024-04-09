@@ -2,16 +2,14 @@
 import Image from "next/image";
 import Designer from "@/public/designer.png";
 import Designers from "@/public/designers.jpg";
-import { rowdies, syne } from "@/fonts/fonts";
 import { work, work_process } from "@/constants";
 import Clients from "@/components/Clients";
 import { useState } from "react";
-import { useTheme } from "next-themes";
+
 
 export default function Page() {
   const [showWhy, setWhy] = useState(true);
   const [showWork, setWork] = useState(false);
-  const { theme } = useTheme();
   return (
     <main className="flex flex-col">
       <div className="relative">
@@ -22,14 +20,12 @@ export default function Page() {
             alt="designer"
           />
           <h1
-            className={`${syne.className} absolute top-[40%] z-10 text-4xl md:text-6xl font-bold text-center w-full`}
+            className={`absolute top-[40%] text-slate-50 z-10 text-4xl md:text-6xl font-bold text-center w-full`}
           >
             About Us
           </h1>
           <div
-            className={`${
-              theme === "dark" ? "bg-black/50" : "bg-white/75"
-            } overlay2`}
+            className={`bg-darkBlue/50 overlay2`}
           ></div>
         </div>
       </div>
@@ -106,9 +102,7 @@ export default function Page() {
           {work.map((work) => (
             <div
               key={work.name}
-              className={`flex justify-center max-w-md ${
-                theme === "dark" ? "bg-blue-950" : "bg-slate-100"
-              } p-6 rounded-md flex-col`}
+              className={`flex justify-center max-w-md rounded-md flex-col`}
             >
               <i className="flex justify-center">{work.icon}</i>
               <h2 className="text-center text-xl font-semibold mb-6 mt-10">

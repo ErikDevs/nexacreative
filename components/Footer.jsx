@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import logoDark from "../public/DarkLogo.png";
-import logoWhite from "../public/logo-white.png";
-import { useTheme } from "next-themes";
 import Facebook from "../public/facebook.svg";
 import Instargram from "../public/instagram.svg";
 import LinkedIn from "../public/linkedIn.svg";
@@ -16,14 +14,11 @@ import { BiLocationPlus } from "react-icons/bi";
 import { navLinks } from "@/constants";
 
 const Footer = () => {
-  const { theme } = useTheme();
   const [index, setIndex] = useState(0);
 
   return (
     <footer
-      className={`${
-        theme === "dark" ? "bg-gray-900" : "bg-slate-100"
-      } mt-10 px-6 py-16 lg:px-24 mx-auto text-base rounded-b-2xl`}
+      className={` mt-10 px-6 py-16 lg:px-10 bg-slate-100 text-darkBlue mx-auto text-base rounded-b-2xl`}
     >
       <div className="container flex justify-between flex-wrap w-full">
         <div className="flex flex-col">
@@ -31,7 +26,7 @@ const Footer = () => {
           <div className="w-28 mb-10">
             <Image
               className="transition duration-150"
-              src={theme == "dark" ? logoWhite : logoDark}
+              src={logoDark}
               alt="logo"
             />
           </div>
@@ -42,11 +37,9 @@ const Footer = () => {
             </p>
           </div>
           <div
-            className={`${
-              theme === "dark"
-                ? "bg-slate-200 py-1 items-center justify-start px-2 md:w-3/4 max-w-xs transition duration-150 rounded-l-2xl"
-                : ""
-            } flex gap-2 mt-8 items-center justify-start`}
+            className={`"bg-slate-200 py-1 items-center justify-start px-2 md:w-3/4 max-w-xs transition duration-150 rounded-l-2xl
+               
+        flex gap-2 mt-8`}
           >
             <Image
               className={`hover:scale-110 rounded-full transition duration-150 ease-in-out`}
@@ -75,13 +68,13 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="flex mt-10 md:mt-16 gap-2 flex-col font-medium">
+        <div className="flex mt-10 md:mt-16  flex-col">
           <h2 className="font-bold mb-2">Quick links</h2>
           {navLinks.map((link, i) => (
             <Link
               onClick={() => setIndex(i)}
               key={i}
-              className={`${index === i ? "text-brightRed" : ""} `}
+              className={`${index === i ? "text-brightRed font-bold" : ""} `}
               href={link.href}
             >
               {link.name}
@@ -102,15 +95,21 @@ const Footer = () => {
             Sign up for our monthly newsletter to get latest updates. Do not
             worry, we will never spam you.
           </p>
-          <div className="flex justify-between mt-4  items-center">
+          <div className="flex max-sm:flex-col max-sm:gap-2 justify-between mt-4  items-center">
             <input
               type="text"
-              className="flex-1 p-2 rounded-l-xl focus:outline-none"
+              className="md:flex-1 p-2 max-sm:rounded-md rounded-l-md w-full focus:outline-none"
               placeholder="Enter your email address"
             />
-            <i className="bg-brightRed text-white hover:text-brightRed rounded-r-xl hover:bg-white px-2 py-1">
-              <BiSend style={{ fontSize: "2em" }} />
-            </i>
+            <button
+              className="flex items-center justify-center max-sm:justify-between max-sm:rounded-md rounded-r-md gap-2 bg-brightRed hover:bg-brightRed/95 hover:outline outline-brightRed hover:outline-2 
+               hover:outline-offset-2 transition-all duration-300 ease-in-out text-white px-4 py-2 max-sm:w-full"
+            >
+              Send{" "}
+              <span>
+                <BiSend />
+              </span>
+            </button>
           </div>
           <div className="flex flex-col  mt-8">
             <h2 className="font-semibold">Contact Info</h2>

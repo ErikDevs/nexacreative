@@ -4,7 +4,14 @@ import { MdPriceCheck } from "react-icons/md";
 import { MdFindInPage } from "react-icons/md";
 import { MdDesignServices } from "react-icons/md";
 import { MdNextPlan } from "react-icons/md";
-import { BiSolidShip } from "react-icons/bi";
+import {
+  BiCurrentLocation,
+  BiEnvelope,
+  BiPhoneCall,
+  BiSolidShip,
+  BiTime,
+  BiTimer,
+} from "react-icons/bi";
 import { BiCheckCircle } from "react-icons/bi";
 
 export const navLinks = [
@@ -16,7 +23,7 @@ export const navLinks = [
   },
 
   { name: "Portfolio", href: "/portfolio" },
-  { name: "Blog", href: "/blog" },
+  { name: "News", href: "/news" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -197,4 +204,27 @@ export const categories = [
   { name: "Graphic Design" },
   { name: "Digital Marketing" },
   { name: "Social Media" },
+];
+
+export const contactInfo = [
+  {
+    label: "Phone-Number",
+    address: "(254) 797710074",
+    icon: <BiPhoneCall style={{ fontSize: "4rem", color: "#FC6736" }} />,
+  },
+  {
+    label: "Email",
+    address: "info@nexacreative.com",
+    icon: <BiEnvelope style={{ fontSize: "4rem", color: "#FC6736" }} />,
+  },
+  {
+    label: "Operating Time",
+    address: "8:00 AM - 5:00 PM Mon - Sat ",
+    icon: <BiTimer style={{ fontSize: "4rem", color: "#FC6736" }} />,
+  },
+  {
+    label: "Location",
+    address: "Nairobi Kenya",
+    icon: <BiCurrentLocation style={{ fontSize: "4rem", color: "#FC6736" }} />,
+  },
 ];

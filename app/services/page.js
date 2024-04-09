@@ -24,25 +24,23 @@ export default function App() {
     <main className="">
       <section className="flex flex-col-reverse md:flex-row">
         <div className="w-full md:h-[60vh] overflow-hidden relative">
-          <Image src={Agency} className="object-contain md:-mt-48" />
+          <Image src={Agency} className="md:-mt-60 w-full object-cover" />
           <h1
-            className={`${syne.className} absolute top-[40%] z-10 md:text-6xl text-4xl font-bold text-center w-full`}
+            className={`${syne.className} absolute top-[40%] z-10 md:text-6xl text-4xl font-bold text-white text-center w-full`}
           >
             Our Services
           </h1>
           <div
-            className={`${
-              theme === "dark" ? "bg-black/50" : "bg-white/75"
-            } absolute top-0 bottom-0 right-0 left-0 w-full`}
+            className={`overlay2 bg-darkBlue/50`}
           ></div>
         </div>
       </section>
       <section className="container px-6 lg:px-32 flex mt-10 gap-x-20 flex-col md:flex-row">
         <div className="flex flex-col">
-          <h2 className="font-bold md:max-w-md text-3xl">
+          <h2 className="font-bold md:max-w-md mb-8 text-3xl">
             Empower your business with innovative digital solutions.
           </h2>
-          <p className="text-base md:max-w-lg mt-10">
+          <p className="text-base md:max-w-lg mb-10 max-md:mt-0">
             Our commitment to quality and excellence is unparalleled. We have a
             team of seasoned professionals who are passionate about what they do
             and always go the extra mile to exceed customer expectations. From
@@ -50,7 +48,7 @@ export default function App() {
             ensure that every step of the process is executed to perfection.
           </p>
         </div>
-        <div className="border-2 border-slate-600 flex flex-col p-12 gap-8 md:w-1/2">
+        <div className="border-2 border-slate-200 rounded-md flex flex-col p-12 gap-8 md:w-1/2">
           <div className="flex gap-x-4 items-center divide-dotted divide-y-reverse divide-y-2">
             <BiCrown style={{ fontSize: "3em", color: "#FC6736" }} />
             <p>

@@ -1,26 +1,24 @@
-"use client";
-import { useTheme } from "next-themes";
-import { syne } from "@/fonts/fonts";
-import Smile from "@/public/smile.png";
+import { jost } from "@/fonts/fonts";
+import Smile from "@/public/man.png";
+import HeroBg from "@/public/heroBg.jpg";
 import Image from "next/image";
 const HeroSection = () => {
-  const { theme } = useTheme();
   return (
-    <div id="hero" className="rounded-b-2xl">
-      <div className="container overflow-hidden px-6 md:py-24 py-10 lg:px-32  mx-auto flex space-y-12 md:space-y-0 md:space-x-8 flex-col-reverse md:flex-row">
-        <div className="flex flex-col justify-center space-y-10 md:w-1/2">
+    <div id="hero" className="relative">
+      <div className="container px-6 md:py-10 lg:px-10 justify-between mx-auto flex flex-col-reverse md:flex-row">
+        <div className="flex flex-col justify-center md:mt-12 w-full md:w-1/2">
           <h1
-            className={`${syne.className} text-4xl z-10 text-center mt-8 md:text-5xl lg:text-6xl md:max-w-md tracking-tight font-bold md:text-left`}
+            className={`${jost.className} text-4xl z-10 text-center mt-3 md:mt-0 md:text-5xl lg:text-6xl md:max-w-md font-bold md:text-left`}
           >
-            Transforming ideas into visual masterpieces
+            Transforming ideas into visual Masterpiece
           </h1>
-          <p className="max-w-sm text-center md:text-left">
+          <p className="max-w-sm text-center mt-10 md:text-left">
             Our mission is to transform your business into a digital legend,
             crafting compelling narratives and leveraging cutting-edge
             strategies.
           </p>
           <div className="hidden md:block">
-            <button className="py-3 px-5 text-white hover:bg-orange-600 color transition duration-300 ease-in-out bg-brightRed rounded-full baseline font-medium">
+            <button className="py-3 px-5 mt-10 text-white hover:bg-orange-600 color transition duration-300 ease-in-out bg-brightRed rounded-full baseline font-medium">
               Bring your business online - it's Free!
             </button>
           </div>
@@ -30,9 +28,10 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-        <div className="flex justify-end md:w-1/2">
-          <Image src={Smile} width={400} height={200} />
-        </div>
+        <Image width={400} src={Smile} />
+      </div>
+      <div className="w-screen absolute md:overflow-hidden top-0 bottom-0 left-0 right-0 -z-50">
+        <Image src={HeroBg} className="h-[90vh] md:h-auto" />
       </div>
     </div>
   );
