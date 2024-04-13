@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Team from "@/public/Team.jpg";
+import Team from "@/public/team.jpg";
 import { contactInfo } from "@/constants";
 import { BiMailSend } from "react-icons/bi";
 
@@ -30,7 +30,9 @@ const page = () => {
         </div>
         <div className="flex flex-col md:mt-48 mt-20 md:flex-row">
           <div className=" flex flex-col md:w-1/2 w-full">
-            <h2 className="font-bold lg:text-6xl text-4xl mb-16">Shoot Us a Message</h2>
+            <h2 className="font-bold lg:text-6xl text-4xl mb-16">
+              Shoot Us a Message
+            </h2>
             <form className="">
               <div className="flex flex-col md:flex-row  gap-2">
                 <div className="flex flex-col w-full">
@@ -69,22 +71,24 @@ const page = () => {
                 </div>
               </div>
               <div className="flex mt-4 flex-col w-full">
-                  <label>Subject</label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="w-full py-2 outline outline-2"
-                  />
-                </div>
-              <div className="flex mt-4 flex-col w-full">
-                  <label>Message</label>
-                  <textarea
-                    type="textarea"
-                    name="name"
-                    className="w-full py-2 h-[50vh] outline outline-2"
-                  />
+                <label>Subject</label>
+                <input
+                  type="text"
+                  name="name"
+                  className="w-full py-2 outline outline-2"
+                />
               </div>
-              <button className="flex w-full bg-brightRed py-2 mt-2 justify-center items-center gap-2 text-white"><BiMailSend /> Send</button>
+              <div className="flex mt-4 flex-col w-full">
+                <label>Message</label>
+                <textarea
+                  type="textarea"
+                  name="name"
+                  className="w-full py-2 h-[50vh] outline outline-2"
+                />
+              </div>
+              <button className="flex w-full bg-brightRed py-2 mt-2 justify-center items-center gap-2 text-white">
+                <BiMailSend /> Send
+              </button>
             </form>
           </div>
         </div>

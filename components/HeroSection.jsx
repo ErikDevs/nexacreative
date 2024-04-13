@@ -1,5 +1,5 @@
 import { jost } from "@/fonts/fonts";
-import Smile from "@/public/man.png";
+import Smile from "@/public/Man.png";
 import HeroBg from "@/public/heroBg.jpg";
 import Image from "next/image";
 const HeroSection = () => {
