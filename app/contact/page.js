@@ -6,16 +6,16 @@ import { BiMailSend } from "react-icons/bi";
 
 const page = () => {
   return (
-    <main className="px-6 lg:px-10 flex flex-col">
+    <main className="flex flex-col">
       <div className="container flex flex-col">
-        <div className="flex justify-center items-center md:h-screen mb-10 md:mt-0 overflow-hidden rounded-md w-full relative">
-          <Image className="rounded-md" src={Team} />
+        <div className="flex justify-center items-center md:h-screen mb-10 md:mt-0 overflow-hidden w-full relative">
+          <Image src={Team} />
           <h1 className="text-white absolute top-[30%] z-10 max-w-xl font-bold text-4xl lg:text-7xl text-center">
             Get in touch with Nexa Creative Solutions
           </h1>
           <div className="overlay2 bg-darkBlue/50"></div>
         </div>
-        <div className="flex gap-2 flex-wrap justify-center md:absolute left-0 right-0 md:-bottom-36">
+        <div className="flex  gap-2 flex-wrap justify-center md:absolute left-0 right-0 md:-bottom-36">
           {contactInfo.map((contact) => (
             <div
               className="flex justify-center md:w-[300px] w-full items-center px-8 py-6 gap-y-4 
@@ -28,7 +28,7 @@ const page = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col md:mt-48 mt-20 md:flex-row">
+        <div className="flex px-6 lg:px-10 flex-col md:mt-48 mt-20 md:flex-row">
           <div className=" flex flex-col md:w-1/2 w-full">
             <h2 className="font-bold lg:text-6xl text-4xl mb-16">
               Shoot Us a Message

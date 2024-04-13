@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import logoDark from "../public/DarkLogo.png";
+import logoLight from "../public/logo-white.png";
 import Facebook from "../public/facebook.svg";
 import Instargram from "../public/instagram.svg";
 import LinkedIn from "../public/linkedIn.svg";
@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={` mt-10 px-6 py-16 lg:px-10 bg-slate-100 text-darkBlue mx-auto text-base rounded-b-2xl`}
+      className={` mt-10 px-6 py-32 lg:px-10 text-slate-100 bg-darkBlue mx-auto text-base`}
     >
       <div className="container flex justify-between flex-wrap w-full">
         <div className="flex flex-col">
@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="w-28 mb-10">
             <Image
               className="transition duration-150"
-              src={logoDark}
+              src={logoLight}
               alt="logo"
             />
           </div>
@@ -37,35 +37,12 @@ const Footer = () => {
             </p>
           </div>
           <div
-            className={`"bg-slate-200 py-1 items-center justify-start px-2 md:w-3/4 max-w-xs transition duration-150 rounded-l-2xl
-               
-        flex gap-2 mt-8`}
+            className= "flex gap-2 w-full mt-16"
           >
-            <Image
-              className={`hover:scale-110 rounded-full transition duration-150 ease-in-out`}
-              src={Facebook}
-              width={28}
-            />
-            <Image
-              className="hover:scale-110 transition duration-150 ease-in-out"
-              src={Instargram}
-              width={28}
-            />
-            <Image
-              className="hover:scale-110 transition duration-150 ease-in-out"
-              src={Pinterest}
-              width={28}
-            />
-            <Image
-              className="hover:scale-110 transition duration-150 ease-in-out"
-              src={Bihanace}
-              width={32}
-            />
-            <Image
-              className="hover:scale-110 transition duration-150 ease-in-out"
-              src={LinkedIn}
-              width={28}
-            />
+            <Facebook className="icon-color w-8 hover:scale-105 hover:fill-brightRed" />
+            <Instargram className="icon-color w-8 hover:scale-105 hover:fill-brightRed" />
+            <Pinterest className="icon-color w-8 hover:scale-105 hover:fill-brightRed" />
+            <LinkedIn className="icon-color w-8 hover:scale-105 hover:fill-brightRed" />
           </div>
         </div>
         <div className="flex mt-10 md:mt-16  flex-col">

@@ -22,18 +22,19 @@ const Header = () => {
     <nav className="text-darkBlue px-6 lg:px-28 bg-slate-100">
       <div className="container px-6 lg:px-10 py-4 justify-between items-center mx-auto flex">
         {/* logo */}
-          <FiAlignLeft
-            className="lg:hidden mr-60 md:mr-0"
-            onClick={() => setMenu(true)}
-            style={{ fontSize: "2em" }}
-          />
+          
           <Link href="/">
             <Image
               className="transition w-32 duration-150"
               src={logoDark}
               alt="logo"
             />
-          </Link>
+        </Link>
+        <FiAlignLeft
+            className="lg:hidden ml-60 md:mr-0"
+            onClick={() => setMenu(true)}
+            style={{ fontSize: "2em" }}
+          />
 
         {/* Desktop Menu items */}
         <ul className="hidden lg:flex relative gap-6">

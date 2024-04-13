@@ -26,35 +26,35 @@ const Portfolio = () => {
         <div className="md:row-span-2 md:col-span-2 overflow-hidden">
           <Image
             src={Redgeinternational}
-            className="rounded-sm transition duration-300 ease-in-out hover:scale-105 "
+            className="rounded-lg transition duration-300 ease-in-out hover:scale-105 "
           />
           <h2 className="text-2xl font-bold mt-5">Web Design & Development</h2>
         </div>
         <div>
           <Image
             src={brandingItem}
-            className="rounded-sm transition duration-300 ease-in-out hover:scale-105 "
+            className="rounded-lg transition duration-300 ease-in-out hover:scale-105 "
           />
           <h2 className="text-2xl font-bold mt-5">Digital Marketing</h2>
         </div>
         <div>
           <Image
             src={brandingItem}
-            className="rounded-sm transition duration-300 ease-in-out hover:scale-105 "
+            className="rounded-lg transition duration-300 ease-in-out hover:scale-105 "
           />
           <h2 className="text-2xl font-bold mt-5">Social Media</h2>
         </div>
         <div>
           <Image
             src={brandingItem}
-            className="rounded-sm transition duration-300 ease-in-out hover:scale-105 "
+            className="rounded-lg transition duration-300 ease-in-out hover:scale-105 "
           />
           <h2 className="text-2xl font-bold mt-5">Graphic Design</h2>
         </div>
         <div>
           <Image
             src={brandingItem}
-            className="rounded-sm transition duration-300 ease-in-out hover:scale-105 "
+            className="rounded-lg transition duration-300 ease-in-out hover:scale-105 "
           />
           <h2 className="text-2xl font-bold mt-5">Branding</h2>
         </div>
