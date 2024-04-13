@@ -12,19 +12,19 @@ const HeroSection = () => {
           >
             Transforming ideas into visual Masterpiece
           </h1>
-          <p className="max-w-sm text-center mt-10 md:text-left">
+          <p className="md:max-w-sm text-center my-10 md:text-left">
             Our mission is to transform your business into a digital legend,
             crafting compelling narratives and leveraging cutting-edge
             strategies.
           </p>
           <div className="hidden md:block">
             <button className="py-3 px-5 mt-10 text-white hover:bg-orange-600 color transition duration-300 ease-in-out bg-brightRed rounded-full baseline font-medium">
-              Bring your business online - it's Free!
+              Make your online presence felt - it's Free!
             </button>
           </div>
           <div className="flex justify-center w-full">
-            <button className="md:hidden px-5 py-4 text-white bg-brightRed rounded-full baseline">
-              Bring your business online - it's Free!
+            <button className="md:hidden px-5 py-4 text-white bg-brightRed  baseline">
+              Make your online presence felt - it's Free!
             </button>
           </div>
         </div>
