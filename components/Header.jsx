@@ -80,7 +80,7 @@ const Header = () => {
                           onClick={() => setIndex1(i)}
                           className={`${
                             index1 === i ? "font-bold" : ""
-                          } hover:bg-slate-100 p-4 rounded-md`}
+                          } hover:bg-gray-700 hover:text-white p-4 rounded-md`}
                           key={subLink.name}
                           href={subLink.href}
                         >
@@ -113,33 +113,32 @@ const Header = () => {
         <ul
           className={` ${
             menu ? "move-in  " : "move-out"
-          } lg:hidden bg-darkBlue text-white flex flex-col justify-normal p-6 left-0 w-3/4 fixed h-screen scroll-smooth top-0  z-50 gap-y-8`}
+          } lg:hidden bg-white text-darkBlue flex flex-col justify-normal p-6 left-0 w-3/4 fixed h-screen scroll-smooth top-0  z-50 gap-8`}
         >
           {navLinks.map((link, i) => (
             <Link key={link.name} href={link.href}>
-              {i === 2 ? (
+              {i === 1 ? (
                 <div className="flex flex-col">
-                  <span className="flex justify-between items-center">
+                  <span className="flex justify-between hover:bg-gray-700 hover:text-white p-5 rounded-md items-center">
                     {link.name}{" "}
                     {!subMenu ? (
                       <BiPlus
-                        className="bg-blue-700 transition duration-300 ease-in-out"
-                        style={{ fontSize: "1.5em" }}
+                        className="bg-blue-700  transition duration-300 ease-in-out"
+                        style={{ fontSize: "1.5em", color: "white"}}
                         onClick={() => setSubMenu(true)}
                       />
                     ) : (
                       <BiMinus
                         className="bg-blue-700 transition duration-300 ease-in-out"
-                        style={{ fontSize: "1.5em" }}
+                        style={{ fontSize: "1.5em", color: "white" }}
                         onClick={() => setSubMenu(false)}
                       />
                     )}
                   </span>
-                  <hr className="h-1 w-full mt-2" />
                   <ul
                     className={`${
                       subMenu ? "show" : "hide"
-                    } flex flex-col ml-4 gap-2 text`}
+                    } flex flex-col ml-4 gap-5 text`}
                   >
                     {subServices.map((sublink) => (
                       <Link
@@ -147,11 +146,11 @@ const Header = () => {
                         href={sublink.href}
                         onClick={() => setMenu(false)}
                       >
-                        <span className="flex flex-col justify-center gap-2">
-                          <span className="hover:text-brightRed transition-colors duration-300 ease-linear">
+                        <span className="flex flex-col justify-center">
+                          <span className="hover:bg-gray-600 hover:text-white p-3 rounded-md transition-colors duration-300 ease-linear">
                             {sublink.name}
                           </span>
-                          <hr className="h-1 w-full" />
+                         
                         </span>
                       </Link>
                     ))}
@@ -159,8 +158,7 @@ const Header = () => {
                 </div>
               ) : (
                 <span className="flex flex-col justify-center">
-                  <span onClick={() => setMenu(false)}>{link.name}</span>
-                  <hr className="h-1 w-full mt-2" />
+                  <span className="hover:bg-gray-700 hover:text-white p-5 rounded-md" onClick={() => setMenu(false)}>{link.name}</span>
                 </span>
               )}
             </Link>
