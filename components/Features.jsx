@@ -6,14 +6,14 @@ import { MdDoubleArrow } from "react-icons/md";
 const Features = () => {
   const ref = useRef(null);
   return (
-    <div id="features" className=" mx-auto md:mt-32 mt-10 px-6 lg:px-10">
-      <div className="container flex flex-col justify-evenly w-full mx-auto gap-x-6 md:flex-row">
+    <div id="features" className="bg-gray-700 mx-auto md:mt-32 mt-10 rounded-[32px] text-white p-12">
+      <div className="flex flex-col justify-evenly w-full mx-auto gap-x-6 md:flex-row">
         {/* What is diffrenece */}
-        <div className="flex flex-col space-y-12">
+        <div className="flex flex-col justify-center space-y-12">
           <h2 className="max-w-md text-4xl font-bold text-center md:text-left">
             What's different about Nexa Creatives
           </h2>
-          <p className="max-w-md text-left text-gray-400 md:text-left">
+          <p className="max-w-md text-left md:text-left">
             Over the years, our services have grown from web design to include
             Search engine optimization (SEO), ecommerce web design, website
             hosting, Domain registration, Social Media Managements, Bulky SMS

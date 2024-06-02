@@ -15,7 +15,6 @@ import {
 import { BiCheckCircle } from "react-icons/bi";
 
 export const navLinks = [
-  { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   {
     name: "Services",

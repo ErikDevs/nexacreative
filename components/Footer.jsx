@@ -18,16 +18,17 @@ const Footer = () => {
 
   return (
     <footer
-      className={` mt-10 px-6 py-32 lg:px-10 text-slate-100 bg-darkBlue mx-auto text-base`}
+      className={` mt-10 px-6 py-32 lg:px-10 text-slate-100 bg-gray-700 rounded-[32px] mb-10 mx-auto text-base`}
     >
       <div className="container flex justify-between flex-wrap w-full">
         <div className="flex flex-col">
           {/* logo */}
-          <div className="w-28 mb-10">
+          <div className=" mb-10">
             <Image
               className="transition duration-150"
               src={logoLight}
               alt="logo"
+              width={150}
             />
           </div>
           <div className="max-w-xs">

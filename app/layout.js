@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${jost.className}  w-screen overflow-x-hidden mx-auto`}
+        className={`${jost.className} max-w-screen-2xl overflow-x-hidden mx-auto`}
       >
         <div className="">
           <Header />

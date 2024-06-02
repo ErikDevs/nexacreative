@@ -5,22 +5,11 @@ import React from "react";
 
 const Portfolio = () => {
   return (
-    <div className="px-6 lg:px-10 py-16 mx-auto">
+    <div className="px-6 bg-gray-700 text-white mt-28 rounded-[32px] lg:px-10 py-16 mx-auto">
     <section className="container">
       <h1 className="text-4xl font-bold text-center mx-auto my-10">
-        <span>-</span> Portfolio <span>-</span>{" "}
+        <span>-</span> Recent Work <span>-</span>{" "}
       </h1>
-      <div className="flex flex-col md:flex-row justify-between">
-        <h1 className="text-2xl md:text-4xl max-w-md mb-2 font-bold">
-          Creating impact with every project, experience the innovation.
-        </h1>
-        <p className="text-gray-400 text-left text-base max-w-md">
-          A showcase of our commitment to delivering top-tier, innovative
-          digital solutions. We believe in the power of technology and design to
-          transform businesses, catapulting them into the future. Our commitment
-          to quality and excellence is unparalleled.
-        </p>
-      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 my-10  md:grid-rows-2 gap-4">
         <div className="md:row-span-2 md:col-span-2 overflow-hidden">

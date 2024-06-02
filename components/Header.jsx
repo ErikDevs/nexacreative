@@ -19,25 +19,41 @@ const Header = () => {
   const pathName = usePathname();
 
   return (
-    <nav className="text-darkBlue px-6 lg:px-28 bg-slate-100">
-      <div className="container px-6 lg:px-10 py-4 justify-between items-center mx-auto flex">
+    <nav className="text-darkBlue px-6 shadow-md">
+      <div className="container px-6 lg:px-10 py-4 justify-evenly items-center mx-auto flex">
         {/* logo */}
-          
+
+        <div className="md:flex  hidden">
+          <FiAlignLeft
+            className="lg:hidden absolute"
+            onClick={() => setMenu(true)}
+            style={{ fontSize: "3em" }}
+          />
           <Link href="/">
             <Image
-              className="transition w-32 duration-150"
+              className="transition sm:ml-20 lg:m-0 w-[10rem] duration-150"
               src={logoDark}
               alt="logo"
             />
-        </Link>
-        <FiAlignLeft
-            className="lg:hidden ml-60 md:mr-0"
+          </Link>
+        </div>
+        {/* mobile  logo */}
+        <div className="flex justify-between md:hidden ">
+          <Link href="/">
+            <Image
+              className="transition w-[10rem] duration-150"
+              src={logoDark}
+              alt="logo"
+            />
+          </Link>
+          <FiAlignLeft
+            className="lg:hidden absolute right-4"
             onClick={() => setMenu(true)}
-            style={{ fontSize: "2em" }}
+            style={{ fontSize: "2.5em" }}
           />
-
+        </div>
         {/* Desktop Menu items */}
-        <ul className="hidden lg:flex relative gap-6">
+        <ul className="hidden lg:flex relative gap-6 font-bold">
           {navLinks.map((link, i) => {
             const isActive =
               pathName === link.href || pathName.startsWith(link.name);
@@ -47,11 +63,11 @@ const Header = () => {
                 href={link.href}
                 className={`${isActive ? "font-bold" : ""} transition-colors`}
               >
-                {i === 2 ? (
+                {i === 1 ? (
                   <span className="flex menu items-center gap-2">
                     <span
                       onClick={() => setIndex(i)}
-                      className={`${i === 2 ? "hover:font-bold" : ""}`}
+                      className={`${i === 1 ? "hover:font-bold" : ""}`}
                     >
                       {link.name}{" "}
                     </span>{" "}
@@ -79,7 +95,7 @@ const Header = () => {
                     <span
                       className={`${
                         isActive
-                          ? "bg-darkBlue h-[4px] absolute w-full z-50 left-0 right-0 bottom-0 top-12"
+                          ? "bg-brightRed h-[4px] absolute w-full z-50 left-0 right-0 bottom-0 top-12"
                           : ""
                       }`}
                     ></span>
@@ -97,7 +113,7 @@ const Header = () => {
         <ul
           className={` ${
             menu ? "move-in  " : "move-out"
-          } lg:hidden bg-darkBlue text-white flex flex-col justify-normal p-6 left-0 w-3/4 absolute h-screen scroll-smooth top-0  z-50 gap-y-8`}
+          } lg:hidden bg-darkBlue text-white flex flex-col justify-normal p-6 left-0 w-3/4 fixed h-screen scroll-smooth top-0  z-50 gap-y-8`}
         >
           {navLinks.map((link, i) => (
             <Link key={link.name} href={link.href}>

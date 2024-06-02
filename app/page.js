@@ -8,7 +8,7 @@ import Testmonials from "../components/Testmonials";
 
 export default function Home() {
   return (
-    <main className={`text-darkBlue flex justify-center w-screen flex-col mx-auto overflow-hidden"`}>
+    <main className={"text-darkBlue"}>
       <HeroSection />
       <Features />
       <Services />

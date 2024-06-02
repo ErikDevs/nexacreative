@@ -38,27 +38,27 @@ function page() {
       </div>
       <div className="grid gap-2 grid-cols-1 md:grid-cols-2 mt-10 px-6 lg:px-20 lg:grid-cols-3">
         <div className="flex flex-col">
-          <Image src={Brand} />
+          <Image src={Brand} className="rounded-2xl" />
           <h2>Branding Project</h2>
         </div>
         <div className="flex flex-col">
-          <Image src={Brand} />
+          <Image src={Brand} className="rounded-2xl" />
           <h2>Branding Project</h2>
         </div>
         <div className="flex flex-col">
-          <Image src={Brand} />
+          <Image src={Brand} className="rounded-2xl" />
           <h2>Branding Project</h2>
         </div>
         <div className="flex flex-col">
-          <Image src={Brand} />
+          <Image src={Brand} className="rounded-2xl" />
           <h2>Branding Project</h2>
         </div>
         <div className="flex flex-col">
-          <Image src={Brand} />
+          <Image src={Brand} className="rounded-2xl" />
           <h2>Branding Project</h2>
         </div>
         <div className="flex flex-col">
-          <Image src={Brand} />
+          <Image src={Brand} className="rounded-2xl" />
           <h2>Branding Project</h2>
         </div>
       </div>
