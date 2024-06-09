@@ -13,7 +13,9 @@ export default function Home() {
       <Features />
       <Services />
       <Portfolio />
+      <div className="mt-10">
       <Testmonials />
+      </div>
       <Clients />
     </main>
   );

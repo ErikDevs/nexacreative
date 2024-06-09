@@ -42,14 +42,14 @@
 .move-in,
 .move-out,
 .showMenu {
-  transition-property: height transform opacity;
+  transition-property: height transform visibility;
   transition-duration: 0.8s;
   transition-timing-function: ease-in-out;
 }
 
 .hide {
-  height: 0;
-  opacity: 0;
+  height: 0px;
+  visibility: hidden;
 }
 
 .show {
@@ -60,12 +60,12 @@
 
 .move-out {
   transform: translateX(-100%);
-  opacity: 0;
+  visibility: hidden;
 }
 
 .move-in {
   transform: translateX(0);
-  opacity: 1;
+  visibility: visible;
 }
 
 .showMenu {

@@ -6,7 +6,6 @@ import Facebook from "../public/facebook.svg";
 import Instargram from "../public/instagram.svg";
 import LinkedIn from "../public/linkedIn.svg";
 import Pinterest from "../public/pinterest.svg";
-import Bihanace from "../public/behance.svg";
 import Link from "next/link";
 import { BiMailSend, BiSend } from "react-icons/bi";
 import { BiPhone } from "react-icons/bi";
@@ -18,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={` mt-10 px-6 py-32 lg:px-10 text-slate-100 bg-gray-700 rounded-[32px] mb-10 mx-auto text-base`}
+      className={` mt-10 px-6 py-32 lg:px-10 text-slate-100 bg-gray-700 rounded-t-[32px]   mx-auto text-base`}
     >
       <div className="container flex justify-between flex-wrap w-full">
         <div className="flex flex-col">
