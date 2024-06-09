@@ -8,11 +8,10 @@ import webApp from "../constants/Images/appdev.png";
 import socialMedia from "../constants/Images/media2.png";
 import websiteMaintenance from "../constants/Images/webmaitenance.png";
 import { MdDoubleArrow } from "react-icons/md";
-import { MdOutlineArrowForward } from "react-icons/md";
 
 const Services = () => {
   return (
-    <div className="bg-slate-100 w-full p-12 lg:px-10 mx-auto  rounded-[32px] shadow mt-16">
+    <div className="w-full p-12 lg:px-10 mx-auto  rounded-2xl shadow mt-16">
         <h1 className="text-4xl font-bold text-center mx-auto  my-12">
           - Our Services -
         </h1>

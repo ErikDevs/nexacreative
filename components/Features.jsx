@@ -6,7 +6,7 @@ import { MdDoubleArrow } from "react-icons/md";
 const Features = () => {
   const ref = useRef(null);
   return (
-    <div id="features" className="bg-gray-700 mx-auto md:mt-32 mt-10 rounded-[32px] text-white p-12">
+    <div id="features" className="bg-gray-700 mx-auto md:mt-32 mt-10 rounded-2xl text-white p-12">
       <div className="flex flex-col justify-evenly w-full mx-auto gap-x-6 md:flex-row">
         {/* What is diffrenece */}
         <div className="flex flex-col justify-center space-y-12">

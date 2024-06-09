@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={` mt-10 px-6 py-32 lg:px-10 text-slate-100 bg-gray-700 rounded-t-[32px]   mx-auto text-base`}
+      className={`mt-10 px-6 py-5 lg:px-10 text-slate-100 bg-gray-700 rounded-t-2xl mx-auto text-base`}
     >
       <div className="container flex justify-between flex-wrap w-full">
         <div className="flex flex-col">

@@ -19,7 +19,7 @@ const Header = () => {
   const pathName = usePathname();
 
   return (
-    <nav className="text-darkBlue px-6 shadow-md">
+    <nav className="text-darkBlue px-6 shadow-md rounded-sm bg-slate-50">
       <div className="container px-6 lg:px-10 py-4 justify-evenly items-center mx-auto flex">
         {/* logo */}
 
@@ -53,7 +53,7 @@ const Header = () => {
           />
         </div>
         {/* Desktop Menu items */}
-        <ul className="hidden lg:flex relative gap-6 font-bold">
+        <ul className="hidden lg:flex relative  gap-6 font-bold">
           {navLinks.map((link, i) => {
             const isActive =
               pathName === link.href || pathName.startsWith(link.name);
@@ -73,7 +73,7 @@ const Header = () => {
                     </span>{" "}
                     <MdOutlineExpandMore />
                     <ul
-                      className={`showMenu border-t-4 bg-white w-[300px] p-2 flex rounded-md flex-col absolute  z-50 top-16`}
+                      className={`showMenu py-4 w-[300px] bg-slate-50 p-2 flex rounded-md flex-col absolute z-50 top-14`}
                     >
                       {subServices.map((subLink, i) => (
                         <Link
@@ -124,7 +124,7 @@ const Header = () => {
                     {!subMenu ? (
                       <BiPlus
                         className="bg-blue-700  transition duration-300 ease-in-out"
-                        style={{ fontSize: "1.5em", color: "white"}}
+                        style={{ fontSize: "1.5em", color: "white" }}
                         onClick={() => setSubMenu(true)}
                       />
                     ) : (
@@ -150,7 +150,6 @@ const Header = () => {
                           <span className="hover:bg-gray-600 hover:text-white p-3 rounded-md transition-colors duration-300 ease-linear">
                             {sublink.name}
                           </span>
-                         
                         </span>
                       </Link>
                     ))}
@@ -158,7 +157,12 @@ const Header = () => {
                 </div>
               ) : (
                 <span className="flex flex-col justify-center">
-                  <span className="hover:bg-gray-700 hover:text-white p-5 rounded-md" onClick={() => setMenu(false)}>{link.name}</span>
+                  <span
+                    className="hover:bg-gray-700 hover:text-white p-5 rounded-md"
+                    onClick={() => setMenu(false)}
+                  >
+                    {link.name}
+                  </span>
                 </span>
               )}
             </Link>

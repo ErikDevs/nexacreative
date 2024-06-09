@@ -5,7 +5,7 @@ import React from "react";
 
 const Portfolio = () => {
   return (
-    <div className="px-6 bg-gray-700 text-white mt-28 rounded-[32px] lg:px-10 py-16 mx-auto">
+    <div className="px-6 bg-gray-700 text-white mt-28 rounded-2xl lg:px-10 py-16 mx-auto">
     <section className="container">
       <h1 className="text-4xl font-bold text-center mx-auto my-10">
         <span>-</span> Recent Work <span>-</span>{" "}
