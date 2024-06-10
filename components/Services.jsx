@@ -11,7 +11,7 @@ import { MdDoubleArrow } from "react-icons/md";
 
 const Services = () => {
   return (
-    <div className="w-full p-12 lg:px-10 mx-auto  rounded-2xl shadow mt-16">
+    <div className="w-full px-10 py-2 lg:px-10 mx-auto  rounded-2xl  mt-16">
         <h1 className="text-4xl font-bold text-center mx-auto  my-12">
           - Our Services -
         </h1>

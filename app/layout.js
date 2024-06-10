@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import "./globals.css";
 
 export const metadata = {
-  title: "Nexacreatives digital solutions",
+  title: "Nexa Creative Solutions",
   description: "Website to showcase our services",
 };
 

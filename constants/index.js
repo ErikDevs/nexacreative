@@ -15,6 +15,7 @@ import {
 import { BiCheckCircle } from "react-icons/bi";
 
 export const navLinks = [
+  { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   {
     name: "Services",
@@ -27,12 +28,12 @@ export const navLinks = [
 ];
 
 export const subServices = [
-  { name: "Website Design & Development", href: "/services/#webdesign" },
-  { name: "Digital Marketing & SEO", href: "/services/#digitalmarketing" },
-  { name: "Graphic Design & Branding", href: "/services/#graphicdesign" },
-  { name: "WebApp Development", href: "services/#webapp" },
-  { name: "Social Media Management", href: "services/#socialmedia" },
-  { name: "Website Maintenance", href: "/services/#maintenance" },
+  { name: "Website Design & Development", href: "/webdesign" },
+  { name: "Digital Marketing & SEO", href: "/digitalmarketing" },
+  { name: "Graphic Design & Branding", href: "/graphicdesign" },
+  { name: "WebApp Development", href: "/webapp" },
+  { name: "Social Media Management", href: "/socialmedia" },
+  { name: "Website Maintenance", href: "/maintenance" },
 ];
 
 export const work = [

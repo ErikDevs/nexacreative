@@ -29,7 +29,7 @@ const HeroSection = () => {
       <div className="">
         <Image width={400} src={Smile} />
       </div>
-      <div className="w-96 h-96 bg-darkBlue hidden md:block md:absolute lg:right-72 rounded-full -z-50"></div>
+      <div className="w-96 h-96 bg-gray-700 hidden md:block md:absolute lg:right-72 rounded-full -z-50"></div>
     </div>
   );
 };

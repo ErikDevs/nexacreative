@@ -19,8 +19,8 @@ const Header = () => {
   const pathName = usePathname();
 
   return (
-    <nav className="text-darkBlue px-6 shadow-md rounded-sm bg-slate-50">
-      <div className="container px-6 lg:px-10 py-4 justify-evenly items-center mx-auto flex">
+    <nav className="text-darkBlue px-6 shadow-md rounded-2xl bg-slate-50">
+      <div className="px-6 lg:px-10 py-4 justify-between mt-2 items-center mx-auto flex">
         {/* logo */}
 
         <div className="md:flex  hidden">
@@ -63,7 +63,7 @@ const Header = () => {
                 href={link.href}
                 className={`${isActive ? "font-bold" : ""} transition-colors`}
               >
-                {i === 1 ? (
+                {i === 2 ? (
                   <span className="flex menu items-center gap-2">
                     <span
                       onClick={() => setIndex(i)}
@@ -117,7 +117,7 @@ const Header = () => {
         >
           {navLinks.map((link, i) => (
             <Link key={link.name} href={link.href}>
-              {i === 1 ? (
+              {i === 2 ? (
                 <div className="flex flex-col">
                   <span className="flex justify-between hover:bg-gray-700 hover:text-white p-5 rounded-md items-center">
                     {link.name}{" "}
