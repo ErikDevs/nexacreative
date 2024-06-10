@@ -9,10 +9,48 @@ import {
   BiEnvelope,
   BiPhoneCall,
   BiSolidShip,
-  BiTime,
   BiTimer,
 } from "react-icons/bi";
 import { BiCheckCircle } from "react-icons/bi";
+import webDesign from "../constants/Images/webdesign.png";
+import digitalMarketing from "../constants/Images/digitalmarketing.png";
+import graphicDesign from "../constants/Images/graphicdesign.png";
+import webApp from "../constants/Images/appdev.png";
+import socialMedia from "../constants/Images/media2.png";
+import websiteMaintenance from "../constants/Images/webmaitenance.png";
+
+export const services = [
+  {
+    title: "Web Design",
+    desc: "We create visually stunning and functional websites that not only attract visitors but also turn them into customers",
+    image: webDesign
+  },
+  {
+    title: "Digital Marketing", 
+    desc: "Our expert team uses a data-driven approach, leveraging the latest techniques to boost your online presence.",
+    image: digitalMarketing
+  },
+  {
+    title: "Graphic Design",
+    desc: "Our creative graphic designers produce engaging and impactful designs that capture your brand’s essence.",
+    image: graphicDesign
+  },
+  {
+    title: "WebApp Design and Dev",
+    desc: "We create scalable, robust mobile apps that perform well and offer a consistent user experience across devices.",
+    image: webApp
+  },
+  {
+    title: "Social Media Management",
+    desc: "Our social media experts craft compelling content, engage with your audience, and manage your social presence.",
+    image: socialMedia
+  },
+  {
+    title: "Web Maintenace",
+    desc: "Our web maintenance service offers comprehensive support and upkeep for your digital solutions.",
+    image: websiteMaintenance
+  }
+]
 
 export const navLinks = [
   { name: "Home", href: "/" },
